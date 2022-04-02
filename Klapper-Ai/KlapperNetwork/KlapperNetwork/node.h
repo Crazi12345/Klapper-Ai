@@ -6,14 +6,21 @@ class Node
 {
 public:
     Node();
+    Node(int row,int index);
     double getWeight();
+    int getRow();
+    int getIndex();
 
 
 private:
 double weight;
+int row;
+int index;
+
+////
 void calculateNewWeight();
-double sigmoid(double x);
-double σ(double x);
+
+
 
 };
 

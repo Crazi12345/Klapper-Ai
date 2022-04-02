@@ -1,29 +1,34 @@
 #include "node.h"
 #include <math.h>
 #include <iostream>
+
+// Constructors
 Node::Node()
 {
-std::cout << sigmoid(10000.0) << std::endl;
+
+}
+
+Node::Node(int row, int index){
+    this->index = index;
+    this->row =row;
 }
 
 
+//getters and setters
 double Node::getWeight() {
     return weight;
 }
+int Node::getIndex(){
+    return index;
+}
 
+int Node::getRow(){
+    return row;
+}
+
+
+//Calculate Funtions
 void Node::calculateNewWeight(){
 
-
-
 }
 
-
-double Node::sigmoid(double x){
-
-    return(1/(1+pow(2.71828,-1.0*x)));
-}
-
-double Node::σ(double x)
-{
-
-}

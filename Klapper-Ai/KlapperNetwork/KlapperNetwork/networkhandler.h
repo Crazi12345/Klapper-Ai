@@ -3,6 +3,7 @@
 #include <iostream>
 #include "node.h"
 #include <vector>
+#include "backpropagation.h"
 class NetworkHandler
 {
 public:
@@ -10,6 +11,7 @@ public:
     NetworkHandler(int inputNodeCount,int numberOfLayers,int numberOfNodes);
     void generateNodes();
     void PrettyPrint();
+    void BackProp();
 private:
     std::vector<std::vector<Node>> nodes;
 

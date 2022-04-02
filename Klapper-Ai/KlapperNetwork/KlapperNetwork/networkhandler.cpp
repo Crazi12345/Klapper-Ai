@@ -17,7 +17,7 @@ void NetworkHandler::generateNodes(){
     // Loop to generate the inputLayer
     std::vector<Node> temp;
     for(int i = 0; i<inputNodeCount;i++)
-    { Node* n = new Node;
+    { Node* n = new Node(0,i);
      temp.push_back(*n);
     }
     nodes.push_back(temp);
@@ -28,7 +28,7 @@ void NetworkHandler::generateNodes(){
     for(int i = 1; i<numberOfLayers;i++){
         temp.clear();
         for(int j = 0; j<tempNumOfNodes;j++){
-            Node* n = new Node;
+            Node* n = new Node(i,j);
             temp.push_back(*n);
         }
         nodes.push_back(temp);
@@ -36,7 +36,7 @@ void NetworkHandler::generateNodes(){
     }
 
     // making the last output Node
-    Node* n = new Node;
+    Node* n = new Node(nodes.size()-1,0);
     temp.clear();
     temp.push_back(*n);
     nodes.push_back(temp);
@@ -56,6 +56,7 @@ void NetworkHandler::PrettyPrint(){
                 rows[j]=false;
             }
             if(rows[j]==true){
+
                 std::cout << "*  ";
             }
             else{
@@ -66,7 +67,12 @@ void NetworkHandler::PrettyPrint(){
     }
 }
 
+void NetworkHandler::BackProp(){
 
+    backpropagation bp(&nodes);
+
+
+}
 
 
 
