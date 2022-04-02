@@ -7,4 +7,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(KlapperNetwork main.cpp
 node.h node.cpp
-networkhandler.h networkhandler.cpp)
+networkhandler.h networkhandler.cpp
+database.db sqlite3.h sqlite3.c)

@@ -12,6 +12,9 @@ public:
 private:
 double weight;
 void calculateNewWeight();
+double sigmoid(double x);
+double σ(double x);
+
 };
 
 #endif // NODE_H
