@@ -12,7 +12,7 @@ int main()
 connection* conn;
    string sql;
 
-      connection C("dbname = isaac user = postgres hostaddr = 192.168.0.104 port = 5432");
+      connection C("dbname = isaac user = postgres password = Isaac hostaddr = 100.64.25.228 port = 5432");
       if (C.is_open()) {
          cout << "Opened database successfully: " << C.dbname() << endl;
       } else {
@@ -22,7 +22,7 @@ connection* conn;
 
 
 /* Create SQL statement */
-     sql = "DROP TABLE COMPANY";
+   //  sql = "DROP TABLE COMPANY";
 
      /* Create a transactional object. */
      work W(C);
@@ -36,12 +36,12 @@ connection* conn;
 
 
    //  connection = sqlite3_open(location,&DB);
-/*
+
 
     NetworkHandler nh(100,5,10);
     nh.generateNodes();
     nh.PrettyPrint();
-    */
+
 
     return 0;
 }
