@@ -45,7 +45,7 @@ void NetworkHandler::generateNodes(){
 }
 
 void NetworkHandler::PrettyPrint(){
-    // Not working currently
+
 
     bool rows[nodes.size()];
     for(int b = 0; b<nodes.size();b++){rows[b]=true;}

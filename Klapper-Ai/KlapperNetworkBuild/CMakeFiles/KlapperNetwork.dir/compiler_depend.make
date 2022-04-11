@@ -308,9 +308,13 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/11.2.0/bits/stl_bvector.h \
   /usr/include/c++/11.2.0/bits/vector.tcc \
   /home/tired_atlas/Desktop/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/backpropagation.h \
-  /usr/include/sqlite3.h \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/c++/11.2.0/fstream \
+  /usr/include/c++/11.2.0/bits/codecvt.h \
+  /usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+  /usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
+  /usr/include/c++/11.2.0/bits/fstream.tcc \
   /usr/include/pqxx/pqxx \
   /usr/include/pqxx/array \
   /usr/include/pqxx/array.hxx \
@@ -405,7 +409,6 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
   /usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
   /usr/include/libintl.h \
-  /usr/include/c++/11.2.0/bits/codecvt.h \
   /usr/include/c++/11.2.0/bits/locale_facets_nonio.tcc \
   /usr/include/c++/11.2.0/bits/locale_conv.h \
   /usr/include/c++/11.2.0/iomanip \
@@ -1012,6 +1015,10 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 
 /usr/include/pqxx/result.hxx:
 
+/usr/include/c++/11.2.0/pstl/glue_memory_defs.h:
+
+/usr/include/c++/11.2.0/backward/auto_ptr.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h:
 
 /usr/include/bits/byteswap.h:
@@ -1150,8 +1157,6 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 
 /usr/include/c++/11.2.0/ext/string_conversions.h:
 
-/usr/include/c++/11.2.0/pstl/glue_memory_defs.h:
-
 /usr/include/pqxx/robusttransaction.hxx:
 
 /usr/include/c++/11.2.0/bits/stl_construct.h:
@@ -1248,6 +1253,8 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 
 /usr/include/c++/11.2.0/system_error:
 
+/usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/basic_file.h:
+
 /usr/include/pqxx/transaction:
 
 /usr/include/bits/pthreadtypes-arch.h:
@@ -1259,6 +1266,12 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 /usr/include/c++/11.2.0/cwctype:
 
 /usr/include/bits/types/sigset_t.h:
+
+/usr/include/c++/11.2.0/locale:
+
+/usr/include/sys/types.h:
+
+/usr/include/c++/11.2.0/ext/numeric_traits.h:
 
 /home/tired_atlas/Desktop/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/networkhandler.h:
 
@@ -1273,6 +1286,12 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 /usr/include/c++/11.2.0/limits:
 
 /usr/include/c++/11.2.0/bits/specfun.h:
+
+/usr/include/c++/11.2.0/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/11.2.0/ext/new_allocator.h:
+
+/usr/include/pqxx/array.hxx:
 
 /usr/include/c++/11.2.0/bits/uniform_int_dist.h:
 
@@ -1305,6 +1324,8 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 /usr/include/c++/11.2.0/new:
 
 /usr/include/sys/cdefs.h:
+
+/usr/include/c++/11.2.0/bits/fstream.tcc:
 
 /usr/include/c++/11.2.0/bits/range_access.h:
 
@@ -1414,25 +1435,9 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 
 /usr/include/c++/11.2.0/cstdint:
 
-/usr/include/c++/11.2.0/ext/new_allocator.h:
-
-/usr/include/pqxx/array.hxx:
-
-/usr/include/c++/11.2.0/bits/atomic_lockfree_defines.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/11.2.0/math.h:
-
-/usr/include/stdint.h:
-
 /usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++locale.h:
 
 /usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
-
-/usr/include/c++/11.2.0/bits/codecvt.h:
-
-/usr/include/bits/locale.h:
 
 /usr/include/c++/11.2.0/cctype:
 
@@ -1494,14 +1499,6 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 
 /usr/include/c++/11.2.0/bits/stl_function.h:
 
-/usr/include/c++/11.2.0/locale:
-
-/usr/include/sys/types.h:
-
-/usr/include/c++/11.2.0/ext/numeric_traits.h:
-
-/usr/include/sqlite3.h:
-
 /usr/include/c++/11.2.0/stdexcept:
 
 /usr/include/c++/11.2.0/bits/basic_string.h:
@@ -1523,6 +1520,10 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 /usr/include/bits/types/struct_FILE.h:
 
 /usr/include/bits/stdio.h:
+
+/usr/include/bits/locale.h:
+
+/usr/include/c++/11.2.0/bits/codecvt.h:
 
 /usr/include/c++/11.2.0/ctime:
 
@@ -1580,6 +1581,18 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 
 /usr/include/c++/11.2.0/bits/istream.tcc:
 
+/usr/include/c++/11.2.0/fstream:
+
+/usr/include/c++/11.2.0/bits/stl_relops.h:
+
+/usr/include/endian.h:
+
+/usr/include/c++/11.2.0/math.h:
+
+/usr/include/stdint.h:
+
+/usr/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++io.h:
+
 /usr/include/c++/11.2.0/numeric:
 
 /usr/include/c++/11.2.0/ciso646:
@@ -1589,8 +1602,6 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 /usr/include/pqxx/internal/encoding_group.hxx:
 
 /usr/include/pqxx/internal/encodings.hxx:
-
-/usr/include/c++/11.2.0/bits/stl_relops.h:
 
 /usr/include/c++/11.2.0/optional:
 
@@ -1619,5 +1630,3 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
 /usr/include/c++/11.2.0/bits/streambuf.tcc:
 
 /usr/include/c++/11.2.0/ext/aligned_buffer.h:
-
-/usr/include/c++/11.2.0/backward/auto_ptr.h:
