@@ -32,7 +32,7 @@ void NetworkHandler::generateNodes(){
             temp.push_back(*n);
         }
         nodes.push_back(temp);
-        tempNumOfNodes += 2;
+        //tempNumOfNodes += 2;
     }
 
     // making the last output Node
