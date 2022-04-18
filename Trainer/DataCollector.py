@@ -30,9 +30,17 @@ def visualize():
     signal = np.frombuffer(signal, dtype ="int16")
     print(signal)
     print(len(signal))
+    #tempSig = {}
+
+    #for i in range(len(signal)):
+    #    if i % 5 ==0:
+   #         tempSig[i/5]=signal[i]
+
     # gets the frame rate
     f_rate = raw.getframerate()
- 
+    #signal = tempSig
+   # print(signal)
+   # print(len(signal))
     # to Plot the x-axis in seconds
     # you need get the frame rate
     # and divide by size of your signal

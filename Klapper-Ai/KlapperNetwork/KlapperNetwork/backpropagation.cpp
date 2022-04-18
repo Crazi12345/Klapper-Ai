@@ -30,12 +30,5 @@ double backpropagation::delta(double x, double y,int switcher){
 }
 
 //Operators
-double backpropagation::σ(double x)
-{
-    return sigmoid(x);
-}
-
-double backpropagation::f´σ(double x)
-{
-    return derivedSigmoid(x);
-}
+/*
+*/
