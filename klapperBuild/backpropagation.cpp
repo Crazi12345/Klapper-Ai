@@ -3,7 +3,23 @@
 #include "node.h"
 backpropagation::backpropagation(std::vector<std::vector<Node>> *nodes)
 {
-this->nodes = nodes;
+    this->_nodes = nodes;
+
+
+
+
+}
+
+void backpropagation::set_stepsize(float input_step)
+{
+    _stepsize = input_step;
+}
+
+void backpropagation::backpropagate(float nn_output, float bias_weight)
+{
+
+
+
 }
 
 double backpropagation::sigmoid(double x){

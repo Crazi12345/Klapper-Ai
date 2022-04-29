@@ -1,4 +1,5 @@
 #include "networkhandler.h"
+#include <math.h>
 
 NetworkHandler::NetworkHandler()
 {
@@ -21,7 +22,7 @@ void NetworkHandler::generateNodes(){
         for(int weight_index = 0; weight_index < 10; weight_index++){
             n->setweight(1, weight_index);
         }
-     temp.push_back(*n);
+        temp.push_back(*n);
     }
     nodes.push_back(temp);
 
@@ -82,61 +83,75 @@ void NetworkHandler::BackProp(){
 
 float NetworkHandler::CalculateOutput(std::vector<int> inputs)
 {
+
+    nodes.at(0).at(0).setweight(5,0);
     if ((int)inputs.size() != inputNodeCount){
         std::cout << "input amount does not match network input nodes amount" << std::endl;
         return 0;
     }
     //input node cound amount of nodes, that each has 10 values stemming from 10 different weights
-    float startValues[inputNodeCount][numberOfNodes];
+    float startOutputs[inputNodeCount];
+
+    float hidden_layer_outputs[numberOfLayers-1][numberOfNodes];
 
     //10 nodes who each has 10 different values stemming from 10 different weights.
     float layervalues[numberOfNodes];
-    for(int i = 0; i < numberOfNodes; i++){
-        layervalues[i] = 0;
-    }
-
-    //Assign start values to the weights of the first 500 nodes multiplied by their numbers.
-    for(int i = 0; i < inputNodeCount; i++){
-        for(int j = 0; j < numberOfNodes; j++){
-
-            float node_value = nodes.at(0).at(i).sigmoid(inputs.at(i));
-            float node_weight = nodes.at(0).at(i).getWeight(j);
-
-            startValues[i][j] = node_weight*node_value;
-        }
-    }
-
 
     //Start with the second first layer, and sum all the values from the previous layer
     //get all layers -> 1 : 4
     for(int i = 1; i < (int)nodes.size(); i++){
 
+        for(int p = 0; p < (int)nodes.at(i-1).size(); p++){
+            if(i == 1){
+                float node_value = sigmoid(inputs.at(p));
+                //remember the values of all the outputs from the first layer
+                startOutputs[p] = node_value;
+            }else{
+                float node_value = sigmoid(layervalues[p]);
+                hidden_layer_outputs[i-2][p] = node_value;
+            }
+
+        }
+
+
         //All nodes in the layer -> 0 : 9 OR 0 if output layer, i == 4
         for(int j = 0; j < (int)nodes.at(i).size(); j++){
-            int addition_amounts = 0;
+            float addition_counter = 0;
 
             float value = 0;
 
-            //All nodes in the previous layer -> 0 : 9 OR 0 : 499 if i == 1
+
             for(int p = 0; p < (int)nodes.at(i-1).size(); p++){
                 if(i == 1){
-                    value += startValues[p][j];
-                }else{
-                    float node_values = nodes.at(i-1).at(p).sigmoid(layervalues[j]);
                     float node_weight = nodes.at(i-1).at(p).getWeight(j);
-                    value += node_values*node_weight;
+
+                    value += startOutputs[p]*node_weight;
+
+                }else{
+                    float node_weight = nodes.at(i-1).at(p).getWeight(j);
+
+                    value += hidden_layer_outputs[i-2][p]*node_weight;
+
                 }
-                addition_amounts++;
+                addition_counter++;
+
             }
-            layervalues[j] = value/addition_amounts;
+
+            layervalues[j] = value/addition_counter;
+
         }
     }
 
     float output = layervalues[0];
 
     //Return sigmoid of the last node.
-    return nodes.at(nodes.size()-1).at(0).sigmoid(output);
+    return sigmoid(output);
 
+}
+
+double NetworkHandler::sigmoid(double x){
+
+    return(1/(1+pow(2.71828,-1*x)));
 }
 
 

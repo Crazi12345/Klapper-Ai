@@ -32,10 +32,6 @@ void Node::calculateNewWeight(){
 
 }
 
-double Node::sigmoid(double x){
-
-    return(1/(1+pow(2.71828,-1*x)));
-}
 
 void Node::setweight(double input_weight, int index)
 {

@@ -10,7 +10,7 @@ public:
     double getWeight(int index);
     int getRow();
     int getIndex();
-    double sigmoid(double x);
+
     void setweight(double, int);
 
 

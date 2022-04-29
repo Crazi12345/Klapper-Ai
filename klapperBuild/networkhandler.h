@@ -18,10 +18,18 @@ public:
 
 private:
     std::vector<std::vector<Node>> nodes;
+    double sigmoid(double x);
 
-    int inputNodeCount;
-    int numberOfLayers;
-    int numberOfNodes;
+    int inputNodeCount = 0;
+    int numberOfLayers = 0;
+    int numberOfNodes = 0;
+
+    float bias_input = 1;
+    float bias_weight = 1;
+
+    //output data logging
+    float * startlayer_outputs;
+    float * layer_outputs;
 };
 
 #endif // NETWORKHANDLER_H

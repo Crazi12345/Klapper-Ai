@@ -30,7 +30,9 @@ int main()
     NetworkHandler nh(500,5,10);
     nh.generateNodes();
     vector<int> input_nn(500, 1);
+    input_nn.at(0) = 2;
     cout << nh.CalculateOutput(input_nn) << endl;
+    nh.PrettyPrint();
 
 
     return 0;
