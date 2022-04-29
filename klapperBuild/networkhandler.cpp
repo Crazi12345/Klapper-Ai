@@ -18,6 +18,9 @@ void NetworkHandler::generateNodes(){
     std::vector<Node> temp;
     for(int i = 0; i<inputNodeCount;i++)
     { Node* n = new Node(0,i);
+        for(int weight_index = 0; weight_index < 10; weight_index++){
+            n->setweight(1, weight_index);
+        }
      temp.push_back(*n);
     }
     nodes.push_back(temp);
@@ -99,7 +102,7 @@ float NetworkHandler::CalculateOutput(std::vector<int> inputs)
             float node_value = nodes.at(0).at(i).sigmoid(inputs.at(i));
             float node_weight = nodes.at(0).at(i).getWeight(j);
 
-            startValues[i][numberOfNodes] = node_weight*node_value;
+            startValues[i][j] = node_weight*node_value;
         }
     }
 

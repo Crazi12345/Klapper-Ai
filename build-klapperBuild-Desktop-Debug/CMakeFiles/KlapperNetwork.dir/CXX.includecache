@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/backpropagation.h
+node.h
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/node.h
+vector
+-
+
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/networkhandler.cpp
+networkhandler.h
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/networkhandler.h
+
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/networkhandler.h
+iostream
+-
+node.h
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/node.h
+vector
+-
+backpropagation.h
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/backpropagation.h
+
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/node.h
+
