@@ -1,17 +1,18 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/peter/QTFiles/KlapperAI/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/backpropagation.cpp" "/home/peter/QTFiles/KlapperAI/Klapper-Ai/Klapper-Ai/KlapperNetworkBuild/CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.o"
+  "/home/peter/QTFiles/KlapperAI/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/main.cpp" "/home/peter/QTFiles/KlapperAI/Klapper-Ai/Klapper-Ai/KlapperNetworkBuild/CMakeFiles/KlapperNetwork.dir/main.cpp.o"
+  "/home/peter/QTFiles/KlapperAI/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/networkhandler.cpp" "/home/peter/QTFiles/KlapperAI/Klapper-Ai/Klapper-Ai/KlapperNetworkBuild/CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o"
+  "/home/peter/QTFiles/KlapperAI/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/node.cpp" "/home/peter/QTFiles/KlapperAI/Klapper-Ai/Klapper-Ai/KlapperNetworkBuild/CMakeFiles/KlapperNetwork.dir/node.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tired_atlas/Desktop/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/backpropagation.cpp" "CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.o.d"
-  "/home/tired_atlas/Desktop/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/main.cpp" "CMakeFiles/KlapperNetwork.dir/main.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/main.cpp.o.d"
-  "/home/tired_atlas/Desktop/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/networkhandler.cpp" "CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o.d"
-  "/home/tired_atlas/Desktop/Klapper-Ai/Klapper-Ai/KlapperNetwork/KlapperNetwork/node.cpp" "CMakeFiles/KlapperNetwork.dir/node.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/node.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # Targets to which this target links.

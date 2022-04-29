@@ -12,6 +12,10 @@ public:
     void generateNodes();
     void PrettyPrint();
     void BackProp();
+
+
+
+
 private:
     std::vector<std::vector<Node>> nodes;
 

@@ -16,6 +16,7 @@ private:
 double weight;
 int row;
 int index;
+double weights[10];
 
 ////
 void calculateNewWeight();
