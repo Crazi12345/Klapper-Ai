@@ -31,7 +31,10 @@ int main()
     nh.generateNodes();
     vector<int> input_nn(500, 1);
     input_nn.at(0) = 2;
-    cout << nh.CalculateOutput(input_nn) << endl;
+    float output =  nh.CalculateOutput(input_nn);
+    cout << output << endl;
+    nh.BackProp(output, true);
+
     nh.PrettyPrint();
 
 

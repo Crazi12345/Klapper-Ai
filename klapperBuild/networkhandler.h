@@ -11,7 +11,7 @@ public:
     NetworkHandler(int inputNodeCount,int numberOfLayers,int numberOfNodes);
     void generateNodes();
     void PrettyPrint();
-    void BackProp();
+    void BackProp(float nn_output, bool);
     float CalculateOutput(std::vector<int>);
 
 
@@ -29,7 +29,7 @@ private:
 
     //output data logging
     float * startlayer_outputs;
-    float * layer_outputs;
+    float * hiddenlayer_outputs;
 };
 
 #endif // NETWORKHANDLER_H

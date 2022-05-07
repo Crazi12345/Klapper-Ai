@@ -74,11 +74,11 @@ void NetworkHandler::PrettyPrint(){
     }
 }
 
-void NetworkHandler::BackProp(){
+void NetworkHandler::BackProp(float nn_output, bool clapSound)
+{
 
-    backpropagation bp(&nodes);
-
-
+    backpropagation bp(&nodes, startlayer_outputs, hiddenlayer_outputs, &nn_output, &bias_weight);
+    bp.backpropagate(clapSound);
 }
 
 float NetworkHandler::CalculateOutput(std::vector<int> inputs)
@@ -137,6 +137,16 @@ float NetworkHandler::CalculateOutput(std::vector<int> inputs)
     }
 
     float output = layervalues[0];
+
+    startlayer_outputs = Output_inputLayer;
+    hiddenlayer_outputs = (float *)Output_hiddenLayers;
+
+    for(int i = 0; i <= (numberOfLayers-1.0)*numberOfNodes; i++){
+
+        std::cout << hiddenlayer_outputs[i] << std::endl;
+
+    }
+
 
     //Return sigmoid of the last node.
     return sigmoid(output);
