@@ -84,15 +84,14 @@ void NetworkHandler::BackProp(){
 float NetworkHandler::CalculateOutput(std::vector<int> inputs)
 {
 
-    nodes.at(0).at(0).setweight(5,0);
     if ((int)inputs.size() != inputNodeCount){
         std::cout << "input amount does not match network input nodes amount" << std::endl;
         return 0;
     }
-    //input node cound amount of nodes, that each has 10 values stemming from 10 different weights
-    float startOutputs[inputNodeCount];
+    //input node count amount of nodes, that each has 10 values stemming from 10 different weights
+    float Output_inputLayer[inputNodeCount];
 
-    float hidden_layer_outputs[numberOfLayers-1][numberOfNodes];
+    float Output_hiddenLayers[numberOfLayers-1][numberOfNodes];
 
     //10 nodes who each has 10 different values stemming from 10 different weights.
     float layervalues[numberOfNodes];
@@ -101,36 +100,31 @@ float NetworkHandler::CalculateOutput(std::vector<int> inputs)
     //get all layers -> 1 : 4
     for(int i = 1; i < (int)nodes.size(); i++){
 
-        for(int p = 0; p < (int)nodes.at(i-1).size(); p++){
+        //Collect output data from all nodes.
+        for(int j = 0; j < (int)nodes.at(i-1).size(); j++){
             if(i == 1){
-                float node_value = sigmoid(inputs.at(p));
-                //remember the values of all the outputs from the first layer
-                startOutputs[p] = node_value;
+                float node_value = sigmoid(inputs.at(j));
+                Output_inputLayer[j] = node_value;
             }else{
-                float node_value = sigmoid(layervalues[p]);
-                hidden_layer_outputs[i-2][p] = node_value;
+                float node_value = sigmoid(layervalues[j]);
+                Output_hiddenLayers[i-2][j] = node_value;
             }
-
         }
 
 
         //All nodes in the layer -> 0 : 9 OR 0 if output layer, i == 4
         for(int j = 0; j < (int)nodes.at(i).size(); j++){
             float addition_counter = 0;
-
             float value = 0;
 
-
             for(int p = 0; p < (int)nodes.at(i-1).size(); p++){
-                if(i == 1){
-                    float node_weight = nodes.at(i-1).at(p).getWeight(j);
+                float node_weight = nodes.at(i-1).at(p).getWeight(j);
 
-                    value += startOutputs[p]*node_weight;
+                if(i == 1){
+                    value += Output_inputLayer[p]*node_weight;
 
                 }else{
-                    float node_weight = nodes.at(i-1).at(p).getWeight(j);
-
-                    value += hidden_layer_outputs[i-2][p]*node_weight;
+                    value += Output_hiddenLayers[i-2][p]*node_weight;
 
                 }
                 addition_counter++;
