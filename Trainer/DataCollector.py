@@ -1,5 +1,6 @@
 from logging import root
 from operator import imod
+from signal import signal
 import psycopg2 as pgres
 import pyaudio as pa
 import wave
@@ -8,6 +9,8 @@ import matplotlib.pyplot as plt
 from tkinter import *
 from tkinter import ttk
 
+from setuptools import Command
+selectedRadio = 0
 chunk = 100
 sample_format = pa.paInt16
 channels = 1
@@ -16,58 +19,45 @@ seconds = 0.5
 filename = "output.wav"
 path = "output.wav"
 p = pa.PyAudio()
+signalArray = [1]
+#selectedRadio = 0
 
 # shows the sound waves
+
+def makeSignal():
+    raw = wave.open(path)
+
+    # -1 indicates all or max frames
+    signal = raw.readframes(-1)
+   
+    signal = np.frombuffer(signal, dtype ="int16")
+    return signal
+
 def visualize():
    
     # reading the audio file
     raw = wave.open(path)
-     
-    # reads all the frames
+
     # -1 indicates all or max frames
     signal = raw.readframes(-1)
    
     signal = np.frombuffer(signal, dtype ="int16")
     print(signal)
-    print(len(signal))
-    #tempSig = {}
-
-    #for i in range(len(signal)):
-    #    if i % 5 ==0:
-   #         tempSig[i/5]=signal[i]
-
-    # gets the frame rate
+   
     f_rate = raw.getframerate()
-    #signal = tempSig
-   # print(signal)
-   # print(len(signal))
-    # to Plot the x-axis in seconds
-    # you need get the frame rate
-    # and divide by size of your signal
-    # to create a Time Vector
-    # spaced linearly with the size
-    # of the audio file
+
     time = np.linspace(
         0, # start
         len(signal) / f_rate,
         num = len(signal)
     )
  
-    # using matplotlib to plot
-    # creates a new figure
+    signalArray = signal
     plt.figure(1)
-     
-    # title of the plot
     plt.title("Sound Wave")
-     
-    # label of x-axis
     plt.xlabel("Time")
-    
-    # actual plotting
     plt.plot(time, signal)
-     
-    # shows the plot
-    # in new window
+    print(signalArray)
     plt.show()
  
 def record():
@@ -97,6 +87,33 @@ def record():
     print('Finished recording')
     saveToWav(frames)
 
+def insert():
+   
+    conn = connect()
+    raw = wave.open(path)
+
+    # -1 indicates all or max frames
+    signalA = raw.readframes(-1)
+   
+    signaA = np.frombuffer(signalA, dtype ="int16")
+    cur  = conn.cursor()
+    if selectedRadio.get() == 1:
+        j = "Clab"
+    else:
+        j = "No Clab"
+ 
+    
+    i = makeSignal().tolist()
+   
+    cur.execute(
+        "insert into untraineddata(data,label) values (%s,%s)",
+        (i, j))
+    conn.commit()
+    cur.close()
+    
+def printI():
+    
+    print(selectedRadio.get())
 
 def saveToWav(frames):
 
@@ -108,10 +125,13 @@ def saveToWav(frames):
     wf.writeframes(b''.join(frames))
     wf.close()
 
-connection = pgres.connect( user = "postgres",
-                            host = "192.168.0.104",
-                            port = "5432",
-                            database = "isaac")
+
+def connect():
+    connection = pgres.connect( user = "postgres",
+                                host = "192.168.0.104",
+                                port = "5432",
+                                database = "isaac")
+    return connection
 
 
 
@@ -121,9 +141,24 @@ root = Tk()
 frm = ttk.Frame(root,padding=10)
 frm.grid()
 
-ttk.Label(frm, text="Hello World!").grid(column=0, row=0)
+selectedRadio = IntVar()
+ttk.Radiobutton(root, 
+               text="Clap",
+               variable=selectedRadio,
+             
+               value=1).grid(column=0,row=2)
+
+ttk.Radiobutton(root, 
+               text="Not a Clab",
+               
+               value=2,variable=selectedRadio,
+               command = selectedRadio
+               ).grid(column=1,row=2)
+
+ttk.Label(frm, text="Trainer").grid(column=0, row=0)
 b1 = Button(frm, text="record", command=record).grid(column=1, row=0)
 b2 =Button(frm, text="visualize", command=visualize).grid(column=2, row=0)
+b3 =Button(frm, text="send to database",command=insert).grid(column=3, row=2)
 root.mainloop()
 
 print("Connected successfully to PostgreSQL")
