@@ -11,11 +11,21 @@ node.h
 /home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/node.h
 vector
 -
+iostream
+-
 
-/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/networkhandler.cpp
+/home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/main.cpp
+iostream
+-
 networkhandler.h
 /home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/networkhandler.h
-math.h
+stdio.h
+-
+string.h
+-
+fstream
+-
+bits/stdc++.h
 -
 
 /home/peter/QTFiles/KlapperAI/Klapper-Ai/klapperBuild/networkhandler.h

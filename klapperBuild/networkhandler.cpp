@@ -17,14 +17,25 @@ void NetworkHandler::generateNodes(){
 
     // Loop to generate the inputLayer
     std::vector<Node> temp;
-    for(int i = 0; i<inputNodeCount;i++)
-    { Node* n = new Node(0,i);
+    for(int i = 0; i<inputNodeCount;i++){ 
+
+        Node* n = new Node(0,i);
         for(int weight_index = 0; weight_index < 10; weight_index++){
-            n->setweight(1, weight_index);
+            float random_weight = (rand()%100 - 50);
+            n->setweight(random_weight, weight_index);
+
         }
         temp.push_back(*n);
+
     }
+
     nodes.push_back(temp);
+
+    for(int i = 0; i < 10; i++){
+        //Generate input bias node
+        float random_weight = (rand()%100 - 50);
+        bias_weight[0][i] = random_weight;
+    }
 
 
     // Loop to generate the Hidden Layers
@@ -34,13 +45,26 @@ void NetworkHandler::generateNodes(){
         for(int j = 0; j<tempNumOfNodes;j++){
             Node* n = new Node(i,j);
             for(int weight_index = 0; weight_index < 10; weight_index++){
-                n->setweight(1, weight_index);
+                float random_weight = (rand()%100 - 50);
+                n->setweight(random_weight, weight_index);
             }
+
+            //Generate bias hidden nodess
+            float random_weight = (rand()%100 - 50);
+            bias_weight[i][j] = random_weight;
+
+
             temp.push_back(*n);
         }
         nodes.push_back(temp);
         //tempNumOfNodes += 2;
+
+
+
     }
+
+
+
 
     // making the last output Node
     Node* n = new Node(nodes.size()-1,0);
@@ -74,11 +98,12 @@ void NetworkHandler::PrettyPrint(){
     }
 }
 
-void NetworkHandler::BackProp(float nn_output, bool clapSound)
+void NetworkHandler::BackProp(float nn_output, float clapSound)
 {
 
-    backpropagation bp(&nodes, startlayer_outputs, hiddenlayer_outputs, &nn_output, &bias_weight);
+    backpropagation bp(&nodes, startlayer_outputs, &(hiddenlayer_outputs[0][0]), &nn_output, &(bias_weight[0][0]));
     bp.backpropagate(clapSound);
+
 }
 
 float NetworkHandler::CalculateOutput(std::vector<int> inputs)
@@ -103,7 +128,7 @@ float NetworkHandler::CalculateOutput(std::vector<int> inputs)
         //Collect output data from all nodes.
         for(int j = 0; j < (int)nodes.at(i-1).size(); j++){
             if(i == 1){
-                float node_value = sigmoid(inputs.at(j));
+                float node_value = inputs.at(j);
                 Output_inputLayer[j] = node_value;
             }else{
                 float node_value = sigmoid(layervalues[j]);
@@ -127,9 +152,13 @@ float NetworkHandler::CalculateOutput(std::vector<int> inputs)
                     value += Output_hiddenLayers[i-2][p]*node_weight;
 
                 }
+
                 addition_counter++;
 
             }
+
+            value += bias_weight[i-1][j];
+            addition_counter++;
 
             layervalues[j] = value/addition_counter;
 
@@ -138,13 +167,15 @@ float NetworkHandler::CalculateOutput(std::vector<int> inputs)
 
     float output = layervalues[0];
 
-    startlayer_outputs = Output_inputLayer;
-    hiddenlayer_outputs = (float *)Output_hiddenLayers;
+    for(int i = 0; i < inputNodeCount; i++){
+        startlayer_outputs[i] = Output_inputLayer[i];
+    }
 
-    for(int i = 0; i <= (numberOfLayers-1.0)*numberOfNodes; i++){
 
-        std::cout << hiddenlayer_outputs[i] << std::endl;
-
+    for(int i = 0; i < numberOfLayers-1; i++){
+        for(int j = 0; j < numberOfNodes; j++){
+            hiddenlayer_outputs[i][j] = Output_hiddenLayers[i][j];
+        }
     }
 
 

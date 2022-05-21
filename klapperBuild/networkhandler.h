@@ -11,7 +11,7 @@ public:
     NetworkHandler(int inputNodeCount,int numberOfLayers,int numberOfNodes);
     void generateNodes();
     void PrettyPrint();
-    void BackProp(float nn_output, bool);
+    void BackProp(float nn_output, float);
     float CalculateOutput(std::vector<int>);
 
 
@@ -24,12 +24,11 @@ private:
     int numberOfLayers = 0;
     int numberOfNodes = 0;
 
-    float bias_input = 1;
-    float bias_weight = 1;
+    float bias_weight[5][10];
 
     //output data logging
-    float * startlayer_outputs;
-    float * hiddenlayer_outputs;
+    float startlayer_outputs[500];
+    float hiddenlayer_outputs[5][10];
 };
 
 #endif // NETWORKHANDLER_H
