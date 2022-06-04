@@ -21,7 +21,7 @@ void NetworkHandler::generateNodes(){
 
         Node* n = new Node(0,i);
         for(int weight_index = 0; weight_index < 10; weight_index++){
-            float random_weight = (rand()%100 - 50);
+            float random_weight = (rand()%50 - 25);
             n->setweight(random_weight, weight_index);
 
         }
@@ -50,7 +50,7 @@ void NetworkHandler::generateNodes(){
             }
 
             //Generate bias hidden nodess
-            float random_weight = (rand()%100 - 50);
+            float random_weight = (rand()%50 - 25);
             bias_weight[i][j] = random_weight;
 
 
@@ -62,8 +62,6 @@ void NetworkHandler::generateNodes(){
 
 
     }
-
-
 
 
     // making the last output Node
@@ -106,7 +104,7 @@ void NetworkHandler::BackProp(float nn_output, float clapSound)
 
 }
 
-float NetworkHandler::CalculateOutput(std::vector<int> inputs)
+float NetworkHandler::CalculateOutput(std::vector<int> &inputs)
 {
 
     if ((int)inputs.size() != inputNodeCount){
@@ -183,6 +181,7 @@ float NetworkHandler::CalculateOutput(std::vector<int> inputs)
     return sigmoid(output);
 
 }
+
 
 double NetworkHandler::sigmoid(double x){
 

@@ -4,6 +4,7 @@
 #include "node.h"
 #include <vector>
 #include "backpropagation.h"
+
 class NetworkHandler
 {
 public:
@@ -12,9 +13,7 @@ public:
     void generateNodes();
     void PrettyPrint();
     void BackProp(float nn_output, float);
-    float CalculateOutput(std::vector<int>);
-
-
+    float CalculateOutput(std::vector<int> &inputs);
 
 private:
     std::vector<std::vector<Node>> nodes;

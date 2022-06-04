@@ -15,7 +15,6 @@ backpropagation::backpropagation(std::vector<std::vector<Node>> *nodes, float * 
 backpropagation::~backpropagation()
 {
 
-
 }
 
 void backpropagation::set_stepsize(float input_step)
@@ -25,7 +24,6 @@ void backpropagation::set_stepsize(float input_step)
 
 void backpropagation::backpropagate(float clapSound)
 {
-
 
 
     float control = clapSound;
@@ -111,7 +109,7 @@ void backpropagation::backpropagate(float clapSound)
                 for(int bias_weight_index = 0; bias_weight_index < weight_count; bias_weight_index++){
                     //Calculcate bias weight
 
-                    _bias_weight[i*10 + j] = _bias_weight[i*10 + j] + (_stepsize * last_layer_sigma[bias_weight_index] * _bias_weight[i*10 + j] ); //The bias output is 1. -> nonexistent
+                    _bias_weight[i*10 + bias_weight_index] = _bias_weight[i*10 + bias_weight_index] + (_stepsize * last_layer_sigma[bias_weight_index] * _bias_weight[i*10 + bias_weight_index] ); //The bias output is 1. -> nonexistent
                 }
             }
 
