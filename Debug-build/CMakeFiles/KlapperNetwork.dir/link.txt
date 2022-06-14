@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/KlapperNetwork.dir/main.cpp.o CMakeFiles/KlapperNetwork.dir/node.cpp.o CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.o -o KlapperNetwork 
