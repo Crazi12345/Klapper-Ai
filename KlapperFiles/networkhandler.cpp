@@ -49,7 +49,7 @@ void NetworkHandler::generateNodes(){
                 n->setweight(random_weight, weight_index);
             }
 
-            //Generate bias hidden nodess
+            //Generate bias hidden nodes
             float random_weight = (rand()%50 - 25);
             bias_weight[i][j] = random_weight;
 
@@ -58,8 +58,6 @@ void NetworkHandler::generateNodes(){
         }
         nodes.push_back(temp);
         //tempNumOfNodes += 2;
-
-
 
     }
 
@@ -86,10 +84,10 @@ void NetworkHandler::PrettyPrint(){
             }
             if(rows[j]==true){
 
-                std::cout << "*  ";
+                std::cout << nodes.at(j).at(i).getWeight(0) << "     ";
             }
             else{
-                std::cout << "   ";
+                std::cout << "     ";
             }
         }
         std::cout << std::endl;

@@ -106,10 +106,11 @@ def insert():
     i = makeSignal().tolist()
    
     cur.execute(
-        "insert into untraineddata(data,label) values (%s,%s)",
+        "insert into untrained_data(data,label) values (%s,%s)",
         (i, j))
     conn.commit()
     cur.close()
+    print("Sent Succesfully to database")
     
 def printI():
     
@@ -127,10 +128,11 @@ def saveToWav(frames):
 
 
 def connect():
-    connection = pgres.connect( user = "postgres",
-                                host = "192.168.0.104",
+    connection = pgres.connect( user = "ymcbvebm",
+                                host = "abul.db.elephantsql.com",
                                 port = "5432",
-                                database = "isaac")
+                                password = "naW5cZI-1o7azsZk1QfAB3CrnMTni0We",
+                                database = "ymcbvebm")
     return connection
 
 

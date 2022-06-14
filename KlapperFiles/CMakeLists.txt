@@ -10,4 +10,5 @@ add_executable(KlapperNetwork main.cpp
 node.h node.cpp
 networkhandler.h networkhandler.cpp
 backpropagation.h backpropagation.cpp
+persistence.h persistence.cpp
 )

@@ -8,8 +8,6 @@ backpropagation::backpropagation(std::vector<std::vector<Node>> *nodes, float * 
     this->_hiddenlayer_outputs = output_hiddenLayer;
     this->_output_nn = output_nn;
     this->_bias_weight = b_weight;
-
-
 }
 
 backpropagation::~backpropagation()
@@ -33,8 +31,8 @@ void backpropagation::backpropagate(float clapSound)
     for(int i = 0; i < 10; i++){
         current_layer_sigma[i] = 0;
     }
-    float last_layer_sigma[10];
 
+    float last_layer_sigma[10];
 
     for (int i = _nodes->size() - 1;  i >= 0; i--){
 
@@ -44,8 +42,6 @@ void backpropagation::backpropagate(float clapSound)
 
 
         float output = 0;
-
-
 
         for(int j = 0; j < _nodes->at(i).size(); j++){
             
@@ -94,15 +90,12 @@ void backpropagation::backpropagate(float clapSound)
             //calculate all weight changes and find the average value.
 
 
-
-
             int weight_count;
             if(i == ((int)_nodes->size() - 2)){
                 weight_count = 1;
             }else{
                 weight_count = 10;
             }
-
 
 
             if( j == 0){
@@ -123,15 +116,9 @@ void backpropagation::backpropagate(float clapSound)
                 _nodes->at(i).at(j).setweight(weight_current + weight_difference, weights_index);
 
 
-
             }
-
         }
-
-
     }
-
-
 }
 
 double backpropagation::sigmoid(double x){

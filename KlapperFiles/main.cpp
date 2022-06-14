@@ -4,15 +4,23 @@
 #include <string.h>
 #include <fstream>
 #include <bits/stdc++.h>
+#include "persistence.h"
 #include <pqxx/pqxx>
 
 
 using namespace std;
 int main()
 {
+    Persistence persistence;
     srand((unsigned) time(0));
-
-    
+try{
+    pqxx::connection conn = persistence.getConnection();
+    pqxx::work db{conn};
+    cout << "connected" <<endl;
+}
+    catch(exception e){
+        cout << e.what()<< endl;
+    }
 
     NetworkHandler nh(500,5,10);
     nh.generateNodes();
@@ -91,10 +99,12 @@ int main()
             nh = NetworkHandler(500,3,5);
             nh.generateNodes();
 
+
         }
 
-    }
 
+    }
+  nh.PrettyPrint();
 
     return 0;
 }

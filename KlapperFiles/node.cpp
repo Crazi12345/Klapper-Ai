@@ -26,6 +26,11 @@ int Node::getRow(){
     return row;
 }
 
+std::string Node::getId(){
+    std::string fname = std::to_string(row);
+    std::string lname = std::to_string(index);
+    return fname+":"+lname;
+}
 
 //Calculate Funtions
 void Node::calculateNewWeight(){
