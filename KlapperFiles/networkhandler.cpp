@@ -63,7 +63,7 @@ void NetworkHandler::generateNodes(){
 
 
     // making the last output Node
-    Node* n = new Node(nodes.size()-1,0);
+    Node* n = new Node(nodes.size(),0);
     temp.clear();
     temp.push_back(*n);
     nodes.push_back(temp);
@@ -71,6 +71,9 @@ void NetworkHandler::generateNodes(){
 
 }
 
+std::vector<std::vector<Node>> NetworkHandler::getNodes(){
+    return nodes;
+}
 void NetworkHandler::PrettyPrint(){
 
 
@@ -84,7 +87,7 @@ void NetworkHandler::PrettyPrint(){
             }
             if(rows[j]==true){
 
-                std::cout << nodes.at(j).at(i).getWeight(0) << "     ";
+                std::cout << nodes.at(j).at(i).getId() << "     ";
             }
             else{
                 std::cout << "     ";

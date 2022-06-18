@@ -7,17 +7,19 @@
 class Persistence
 {
 public:
-    Persistence();
+    Persistence(std::vector<std::vector<Node>> nodes);
     pqxx::connection getConnection();
     std::string getConnectionString();
     void loadNode(std::string nodeId);
-    void saveNodes(std::vector<std::vector<Node>> nodes);
+    void saveNodes();
+    void generateFreshNodes();
     void moveTrainedData(int id);
 
 
 private:
     std::string connectionString = "postgres://ymcbvebm:naW5cZI-1o7azsZk1QfAB3CrnMTni0We@abul.db.elephantsql.com/ymcbvebm";
-
+    std::string generateWeightQueryString(int nodeX, int nodeY);
+    std::vector<std::vector<Node>> nodes;
 
 };
 

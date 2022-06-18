@@ -11,6 +11,7 @@ public:
     NetworkHandler();
     NetworkHandler(int inputNodeCount,int numberOfLayers,int numberOfNodes);
     void generateNodes();
+    std::vector<std::vector<Node>> getNodes();
     void PrettyPrint();
     void BackProp(float nn_output, float);
     float CalculateOutput(std::vector<int> &inputs);

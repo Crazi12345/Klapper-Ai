@@ -26,6 +26,7 @@ int Node::getRow(){
     return row;
 }
 
+// ID For database
 std::string Node::getId(){
     std::string fname = std::to_string(row);
     std::string lname = std::to_string(index);

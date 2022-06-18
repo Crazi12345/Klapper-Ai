@@ -11,16 +11,10 @@
 using namespace std;
 int main()
 {
-    Persistence persistence;
+
+
+
     srand((unsigned) time(0));
-try{
-    pqxx::connection conn = persistence.getConnection();
-    pqxx::work db{conn};
-    cout << "connected" <<endl;
-}
-    catch(exception e){
-        cout << e.what()<< endl;
-    }
 
     NetworkHandler nh(500,5,10);
     nh.generateNodes();
@@ -96,15 +90,19 @@ try{
             cout << "NOICE: " << input2 << endl;
 
             srand((unsigned) time(0));
-            nh = NetworkHandler(500,3,5);
+           /* nh = NetworkHandler(500,3,5);
             nh.generateNodes();
 
-
+*/
         }
 
 
     }
   nh.PrettyPrint();
+   Persistence persistence(nh.getNodes());
+  //persistence.generateFreshNodes();
+  persistence.saveNodes();
+
 
     return 0;
 }
