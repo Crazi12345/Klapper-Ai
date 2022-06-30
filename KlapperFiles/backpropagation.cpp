@@ -1,7 +1,8 @@
 #include "backpropagation.h"
 #include <math.h>
 #include "node.h"
-backpropagation::backpropagation(std::vector<std::vector<Node>> *nodes, float * output_inputLayer, float * output_hiddenLayer, float * output_nn, float * b_weight)
+backpropagation::backpropagation(std::vector<std::vector<Node>> *nodes, float * output_inputLayer,
+                                 float * output_hiddenLayer, float * output_nn, float * b_weight)
 {
     this->_nodes = nodes;
     this->_startlayer_outputs = output_inputLayer;
@@ -74,21 +75,20 @@ void backpropagation::backpropagate(float clapSound)
 
                 output = _hiddenlayer_outputs[(i - 1)*10 + j];
 
-
-                float diferential_part = output*(1 - output);//location from double array to single pointer
+                //location from double array to single pointer
+                float diferential_part = output*(1 - output);
 
 
                 current_layer_sigma[j] = dif_Times_Weight*diferential_part;
 
             }
-
-            if(i == 0){// if starting layer
+// if starting layer
+            if(i == 0){
                 output = _startlayer_outputs[j];
             }
 
 
             //calculate all weight changes and find the average value.
-
 
             int weight_count;
             if(i == ((int)_nodes->size() - 2)){
@@ -101,8 +101,10 @@ void backpropagation::backpropagate(float clapSound)
             if( j == 0){
                 for(int bias_weight_index = 0; bias_weight_index < weight_count; bias_weight_index++){
                     //Calculcate bias weight
-
-                    _bias_weight[i*10 + bias_weight_index] = _bias_weight[i*10 + bias_weight_index] + (_stepsize * last_layer_sigma[bias_weight_index] * _bias_weight[i*10 + bias_weight_index] ); //The bias output is 1. -> nonexistent
+                    //The bias output is 1. -> nonexistent
+                    _bias_weight[i*10 + bias_weight_index] = _bias_weight[i*10 + bias_weight_index] +
+                                                                 (_stepsize * last_layer_sigma[bias_weight_index] *
+                                                                    _bias_weight[i*10 + bias_weight_index] );
                 }
             }
 

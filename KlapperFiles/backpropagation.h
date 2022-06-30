@@ -7,7 +7,8 @@
 class backpropagation
 {
 public:
-    backpropagation( std::vector<std::vector<Node>> *nodes, float * output_inputLayer, float * output_hiddenLayer, float * output_nn, float * b_weight);
+    backpropagation( std::vector<std::vector<Node>> *nodes, float * output_inputLayer,
+                     float * output_hiddenLayer, float * output_nn, float * b_weight);
     ~backpropagation();
     void set_stepsize(float input_step);
     ////

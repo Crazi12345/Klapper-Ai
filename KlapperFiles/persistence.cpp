@@ -48,7 +48,7 @@ void Persistence::saveNodes()
 
         }
         catch(pqxx::sql_error e){
-            std::cout << e.what() << std::endl;
+             std::cout << e.what() << std::endl;
         }
 
         catch(std::exception e){
@@ -117,7 +117,7 @@ void Persistence::generateFreshNodes(){
 
 std::string Persistence::generateWeightQueryString(int nodeX, int nodeY){
 
-    std::string weightString = "'{";
+    std::string weightString = "{";
     for(int n = 0; n<10;n++){
         float weight = nodes.at(nodeX).at(nodeY).getWeight(n);
         std::string weightValString = std::to_string(weight);
@@ -128,7 +128,7 @@ std::string Persistence::generateWeightQueryString(int nodeX, int nodeY){
             weightString.append(",");
         }
     }
-    weightString.append("}'");
+    weightString.append("}");
     std::cout << weightString << std::endl;
     return weightString;
 }
