@@ -8,7 +8,6 @@ class Persistence
 {
 public:
     Persistence();
-    pqxx::connection getConnection();
     std::string getConnectionString();
     std::vector<long> loadNode(std::string nodeId);
     void saveNodes(std::vector<std::vector<Node>> nodes);

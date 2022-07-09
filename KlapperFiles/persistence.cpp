@@ -7,11 +7,8 @@ Persistence::Persistence()
 this->loadNodeData();
 }
 
-pqxx::connection Persistence::getConnection()
-{
-   pqxx::connection conn{"postgres://ymcbvebm:naW5cZI-1o7azsZk1QfAB3CrnMTni0We@abul.db.elephantsql.com/ymcbvebm"};
-   return conn;
-}
+
+
 
 std::string Persistence::getConnectionString()
 {
@@ -20,7 +17,7 @@ std::string Persistence::getConnectionString()
 
 
 void Persistence::loadNodeData(){
-    pqxx::connection conn = this->getConnection();
+    pqxx::connection conn{getConnectionString()};
     pqxx::work tah{conn};
 
     conn.prepare("FindWeight","select * from nodes");
@@ -69,7 +66,7 @@ std::vector<long> Persistence::loadNode(std::string nodeId)
 
 void Persistence::saveNodes(std::vector<std::vector<Node>> nodes)
 {
-    pqxx::connection conn = this->getConnection();
+    pqxx::connection conn{getConnectionString()};
     pqxx::work tah{conn};
 
     std::cout << "Trying to save Nodes Weights"<<std::endl;
@@ -117,7 +114,7 @@ void Persistence::saveNodes(std::vector<std::vector<Node>> nodes)
 
 void Persistence::generateFreshNodes(std::vector<std::vector<Node>> nodes){
 
-    pqxx::connection conn = this->getConnection();
+    pqxx::connection conn{getConnectionString()};
     pqxx::work tah{conn};
 
     conn.prepare("deleteNodes","DROP table nodes");
@@ -184,7 +181,7 @@ std::string Persistence::generateWeightQueryString(int nodeX, int nodeY,std::vec
 }
 
 void Persistence::loadTrainingData(){
-    pqxx::connection conn = this->getConnection();
+    pqxx::connection conn{getConnectionString()};
     pqxx::work tah{conn};
 
     conn.prepare("FindTrainingData","select * from untrained_data");
