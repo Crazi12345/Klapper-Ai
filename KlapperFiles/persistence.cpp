@@ -18,6 +18,7 @@ std::string Persistence::getConnectionString()
     return connectionString;
 }
 
+
 void Persistence::loadNodeData(){
     pqxx::connection conn = this->getConnection();
     pqxx::work tah{conn};
@@ -42,15 +43,14 @@ std::vector<long> Persistence::loadNode(std::string nodeId)
                 break;
             }
 
-
-
-
 }
   //  std::cout << iterationNum<< std::endl;
     if(iterationNum%5==0){
        double procent = (iterationNum/540)*100;
        std::cout << "generating nodes at: "<< procent << "%" << std::endl;
     }
+
+
     std::vector<long> found_messages;
     auto arr = nodeData[row][1].as_array();
     std::pair<pqxx::array_parser::juncture, std::string> elem;
@@ -183,7 +183,39 @@ std::string Persistence::generateWeightQueryString(int nodeX, int nodeY,std::vec
     return weightString;
 }
 
-void Persistence::moveTrainedData(int id)
+void Persistence::loadTrainingData(){
+    pqxx::connection conn = this->getConnection();
+    pqxx::work tah{conn};
+
+    conn.prepare("FindTrainingData","select * from untrained_data");
+    pqxx::result r = tah.exec_prepared("FindTrainingData");
+    trainingData = r;
+}
+std::vector<int> Persistence::getData(){
+
+
+        std::vector<int> found_data;
+        auto arr =  trainingData[0][1].as_array();
+        std::pair<pqxx::array_parser::juncture, std::string> elem;
+        do
+        {
+            elem = arr.get_next();
+            if (elem.first == pqxx::array_parser::juncture::string_value)
+                found_data.push_back(stoul(elem.second));
+        }
+        while (elem.first != pqxx::array_parser::juncture::done);
+
+    if(found_data.size()<=0){
+        std::cout << "No more data" << std::endl;
+
+    }
+    moveTrainedData(pqxx::to_string(trainingData[0][0]));
+   return found_data;
+
+
+}
+
+void Persistence::moveTrainedData(std::string id)
 {
 
 }

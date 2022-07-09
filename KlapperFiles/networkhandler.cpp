@@ -19,11 +19,17 @@ void NetworkHandler::generateNodes(){
     std::vector<Node> temp;
 
      // Loop to generate the inputLayer
+    int LoadingCount =0;
         std::cout << "Generating Input Layer" << std::endl;
     for(int i = 0; i<inputNodeCount;i++){
     Node* n = new Node(0,i);
     n->loadWeight();
     temp.push_back(*n);
+
+    if(i%5 == 0){
+        std::cout << "Loading: " << LoadingCount << "%"<< std::endl;
+        LoadingCount+=1;
+    }
     }
    nodes.push_back(temp);
 
@@ -56,11 +62,14 @@ void NetworkHandler::generateNodes(){
 void NetworkHandler::generateRandomWeightNodes(){
 
     // This is to make sure valueable data do not get deleted;
-    if(CertaintyCheck()){
+  /*  if(CertaintyCheck()){
         return;
     }
-
+*/
     // Loop to generate the inputLayer
+
+    nodes.clear();
+
     std::vector<Node> temp;
     for(int i = 0; i<inputNodeCount;i++){ 
 

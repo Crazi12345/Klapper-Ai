@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/networkhandler.cpp" "CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o.d"
   "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/node.cpp" "CMakeFiles/KlapperNetwork.dir/node.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/node.cpp.o.d"
   "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/persistence.cpp" "CMakeFiles/KlapperNetwork.dir/persistence.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/persistence.cpp.o.d"
+  "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/traininghandler.cpp" "CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o.d"
   )
 
 # Targets to which this target links.

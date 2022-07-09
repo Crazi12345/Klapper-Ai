@@ -13,8 +13,10 @@ public:
     std::vector<long> loadNode(std::string nodeId);
     void saveNodes(std::vector<std::vector<Node>> nodes);
     void generateFreshNodes(std::vector<std::vector<Node>> nodes);
-    void moveTrainedData(int id);
+    void moveTrainedData(std::string id);
     void loadNodeData();
+    std::vector<int> getData();
+    void loadTrainingData();
 
 
 private:
@@ -24,6 +26,7 @@ private:
             int nodeX, int nodeY,std::vector<std::vector<Node>> nodes);
 
     pqxx::result nodeData;
+    pqxx::result trainingData;
     int iterator = 0;
     int iterationNum = 0;
 

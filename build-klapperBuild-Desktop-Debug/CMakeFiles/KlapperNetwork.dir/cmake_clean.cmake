@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/KlapperNetwork.dir/node.cpp.o.d"
   "CMakeFiles/KlapperNetwork.dir/persistence.cpp.o"
   "CMakeFiles/KlapperNetwork.dir/persistence.cpp.o.d"
+  "CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o"
+  "CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o.d"
   "KlapperNetwork"
   "KlapperNetwork.pdb"
 )

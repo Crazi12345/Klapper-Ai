@@ -249,6 +249,30 @@ persistence.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/KlapperNetwork.dir/build.make CMakeFiles/KlapperNetwork.dir/persistence.cpp.s
 .PHONY : persistence.cpp.s
 
+traininghandler.o: traininghandler.cpp.o
+.PHONY : traininghandler.o
+
+# target to build an object file
+traininghandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KlapperNetwork.dir/build.make CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o
+.PHONY : traininghandler.cpp.o
+
+traininghandler.i: traininghandler.cpp.i
+.PHONY : traininghandler.i
+
+# target to preprocess a source file
+traininghandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KlapperNetwork.dir/build.make CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.i
+.PHONY : traininghandler.cpp.i
+
+traininghandler.s: traininghandler.cpp.s
+.PHONY : traininghandler.s
+
+# target to generate assembly for a file
+traininghandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KlapperNetwork.dir/build.make CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.s
+.PHONY : traininghandler.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,6 +297,9 @@ help:
 	@echo "... persistence.o"
 	@echo "... persistence.i"
 	@echo "... persistence.s"
+	@echo "... traininghandler.o"
+	@echo "... traininghandler.i"
+	@echo "... traininghandler.s"
 .PHONY : help
 
 

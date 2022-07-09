@@ -1,0 +1,1 @@
+select * from untrained_data fetch  first 1 Row only;
