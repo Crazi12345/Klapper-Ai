@@ -7,19 +7,25 @@
 class Persistence
 {
 public:
-    Persistence(std::vector<std::vector<Node>> nodes);
+    Persistence();
     pqxx::connection getConnection();
     std::string getConnectionString();
-    void loadNode(std::string nodeId);
-    void saveNodes();
-    void generateFreshNodes();
+    std::vector<long> loadNode(std::string nodeId);
+    void saveNodes(std::vector<std::vector<Node>> nodes);
+    void generateFreshNodes(std::vector<std::vector<Node>> nodes);
     void moveTrainedData(int id);
+    void loadNodeData();
 
 
 private:
-    std::string connectionString = "postgres://ymcbvebm:naW5cZI-1o7azsZk1QfAB3CrnMTni0We@abul.db.elephantsql.com/ymcbvebm";
-    std::string generateWeightQueryString(int nodeX, int nodeY);
-    std::vector<std::vector<Node>> nodes;
+    std::string connectionString =
+            "postgres://ymcbvebm:naW5cZI-1o7azsZk1QfAB3CrnMTni0We@abul.db.elephantsql.com/ymcbvebm";
+    std::string generateWeightQueryString(
+            int nodeX, int nodeY,std::vector<std::vector<Node>> nodes);
+
+    pqxx::result nodeData;
+    int iterator = 0;
+    int iterationNum = 0;
 
 };
 

@@ -1,14 +1,15 @@
-#include "persistence.h"
+﻿#include "persistence.h"
 #include <stdio.h>
+#include <string.h>
 #include <iostream>
-Persistence::Persistence(std::vector<std::vector<Node>> nodes)
+Persistence::Persistence()
 {
-this->nodes = nodes;
+this->loadNodeData();
 }
 
 pqxx::connection Persistence::getConnection()
 {
-    pqxx::connection conn{"postgres://ymcbvebm:naW5cZI-1o7azsZk1QfAB3CrnMTni0We@abul.db.elephantsql.com/ymcbvebm"};
+   pqxx::connection conn{"postgres://ymcbvebm:naW5cZI-1o7azsZk1QfAB3CrnMTni0We@abul.db.elephantsql.com/ymcbvebm"};
    return conn;
 }
 
@@ -17,46 +18,88 @@ std::string Persistence::getConnectionString()
     return connectionString;
 }
 
-
-void Persistence::loadNode(std::string nodeId)
-{
+void Persistence::loadNodeData(){
     pqxx::connection conn = this->getConnection();
     pqxx::work tah{conn};
+
+    conn.prepare("FindWeight","select * from nodes");
+    pqxx::result r = tah.exec_prepared("FindWeight");
+    nodeData = r;
+}
+
+std::vector<long> Persistence::loadNode(std::string nodeId)
+{
+   // std::cout << "Finding weights for node: " << nodeId << std::endl;
+
+    int row,col;
+       iterationNum+=1;
+    for(iterator=0;iterator<541;iterator++){
+            std::string idString = pqxx::to_string(nodeData[iterator][0]);
+             //   std::cout << idString << std::endl;
+            if(idString == nodeId){
+                row=iterator;
+            //    std::cout << "Found" << "idString: "<< idString << " and NodeId: " << nodeId<< std::endl;
+                break;
+            }
+
+
 
 
 }
+  //  std::cout << iterationNum<< std::endl;
+    if(iterationNum%5==0){
+       double procent = (iterationNum/540)*100;
+       std::cout << "generating nodes at: "<< procent << "%" << std::endl;
+    }
+    std::vector<long> found_messages;
+    auto arr = nodeData[row][1].as_array();
+    std::pair<pqxx::array_parser::juncture, std::string> elem;
+    do
+    {
+        elem = arr.get_next();
+        if (elem.first == pqxx::array_parser::juncture::string_value)
+            found_messages.push_back(stoul(elem.second));
+    }
+    while (elem.first != pqxx::array_parser::juncture::done);
+    //std::cout << "Weights Found "<< std::endl;
+    //std::cout << std::endl;
 
-void Persistence::saveNodes()
+   return found_messages;
+}
+
+void Persistence::saveNodes(std::vector<std::vector<Node>> nodes)
 {
     pqxx::connection conn = this->getConnection();
     pqxx::work tah{conn};
-    
+
+    std::cout << "Trying to save Nodes Weights"<<std::endl;
+    bool isWorking = true;
+
+
     //prepared statement that can be used multiple times and is not easily sqlinjected
      conn.prepare("UpdateWeight","Update nodes Set weights = $1 WHERE id = $2");
-    for(int i = 0; i<nodes.size();i++){
 
-    for(int j =0; j< nodes.at(i).size();j++){
+     for(int i = 0; i<nodes.size();i++){
+      for(int j =0; j< nodes.at(i).size();j++){
         std::string id = nodes.at(i).at(j).getId();
-        std::string weightString = generateWeightQueryString(i,j);
-
-
+        std::string weightString = generateWeightQueryString(i,j,nodes);
 
         try{
         // Execute the prepared statement and save it as a result
         pqxx::result r = tah.exec_prepared("UpdateWeight",weightString,id);
-
-
         }
         catch(pqxx::sql_error e){
              std::cout << e.what() << std::endl;
+             isWorking = false;
         }
-
         catch(std::exception e){
             std::cout << e.what() << std::endl;
+            isWorking = false;
         }
-}
-
     }
+
+  }
+    if(isWorking){
     try{
      tah.commit();
       std::cout << "Succesfully saved node weights" << std::endl;
@@ -64,12 +107,19 @@ void Persistence::saveNodes()
     catch(std::exception e){
         std::cout << e.what() << std::endl;
         std::cout << " saveNodes() Failed to commit" << std:: endl;}
+    }
+    else{
+        std::cout << "There were errors did not commit";
+    }
 
 }
 
-void Persistence::generateFreshNodes(){
+
+void Persistence::generateFreshNodes(std::vector<std::vector<Node>> nodes){
+
     pqxx::connection conn = this->getConnection();
     pqxx::work tah{conn};
+
     conn.prepare("deleteNodes","DROP table nodes");
      conn.prepare("genTable",
                   "Create table nodes("
@@ -78,10 +128,11 @@ void Persistence::generateFreshNodes(){
               ");");
      tah.exec_prepared("deleteNodes");
      tah.exec_prepared("genTable");
+
     //prepared statement that can be used multiple times and is not easily sqlinjected
      conn.prepare("insertNode","INSERT INTO nodes(id)Values($1)");
-    for(int i = 0; i<nodes.size();i++){
 
+   for(int i = 0; i<nodes.size();i++){
     for(int j =0; j< nodes.at(i).size();j++){
         std::string id = nodes.at(i).at(j).getId();
 
@@ -115,7 +166,7 @@ void Persistence::generateFreshNodes(){
 
 }
 
-std::string Persistence::generateWeightQueryString(int nodeX, int nodeY){
+std::string Persistence::generateWeightQueryString(int nodeX, int nodeY,std::vector<std::vector<Node>> nodes){
 
     std::string weightString = "{";
     for(int n = 0; n<10;n++){
@@ -125,11 +176,10 @@ std::string Persistence::generateWeightQueryString(int nodeX, int nodeY){
         weightString.append(weightValString);
         weightString.append("\"");
         if(n!=9){
-            weightString.append(",");
-        }
+            weightString.append(",");}
     }
     weightString.append("}");
-    std::cout << weightString << std::endl;
+
     return weightString;
 }
 

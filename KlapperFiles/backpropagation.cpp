@@ -115,7 +115,7 @@ void backpropagation::backpropagate(float clapSound)
 
                 float weight_current = _nodes->at(i).at(j).getWeight(weights_index);
 
-                _nodes->at(i).at(j).setweight(weight_current + weight_difference, weights_index);
+                _nodes->at(i).at(j).setWeight(weight_current + weight_difference, weights_index);
 
 
             }

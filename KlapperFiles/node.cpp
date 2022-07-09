@@ -1,7 +1,7 @@
 #include "node.h"
 #include <math.h>
 #include <iostream>
-
+#include "persistence.h"
 // Constructors
 Node::Node()
 {
@@ -11,6 +11,7 @@ Node::Node()
 Node::Node(int row, int index){
     this->index = index;
     this->row =row;
+
 }
 
 
@@ -39,13 +40,21 @@ void Node::calculateNewWeight(){
 }
 
 
-void Node::setweight(double input_weight, int index)
+void Node::setWeight(double input_weight, int index)
 {
-    if (index >= 0 && index <= 9) weights[index] = input_weight;
+ if (index >= 0 && index <= 9) weights[index] = input_weight;
 
 }
 
+void Node::loadWeight(){
+    Persistence p;
+    std::vector<long> newWeight = p.loadNode(this->getId());
 
+    for(int i = 0; i<newWeight.size();i++){
+
+        weights[i] = newWeight[i];
+    }
+}
 
 
 

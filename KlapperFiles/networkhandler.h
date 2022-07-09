@@ -10,10 +10,12 @@ class NetworkHandler
 public:
     NetworkHandler();
     NetworkHandler(int inputNodeCount,int numberOfLayers,int numberOfNodes);
+    void generateRandomWeightNodes();
     void generateNodes();
     std::vector<std::vector<Node>> getNodes();
     void PrettyPrint();
     void BackProp(float nn_output, float);
+    bool CertaintyCheck();
     float CalculateOutput(std::vector<int> &inputs);
 
 private:

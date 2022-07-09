@@ -17,7 +17,12 @@ int main()
     srand((unsigned) time(0));
 
     NetworkHandler nh(500,5,10);
+    Persistence per;
+
     nh.generateNodes();
+    //nh.generateRandomWeightNodes();
+
+
 
     vector<int> input_nn1(500);
     vector<int> input_nn2(500);
@@ -98,10 +103,11 @@ int main()
 
 
     }
-  nh.PrettyPrint();
-   Persistence persistence(nh.getNodes());
+
+     per.saveNodes(nh.getNodes());
+     //nh.PrettyPrint();
+
   //persistence.generateFreshNodes();
-  persistence.saveNodes();
 
 
     return 0;

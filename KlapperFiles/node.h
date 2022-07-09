@@ -3,6 +3,8 @@
 
 #include <string.h>
 #include <iostream>
+//#include "persistence.h"
+
 class Node
 {
 public:
@@ -12,7 +14,8 @@ public:
     int getRow();
     int getIndex();
     std::string getId();
-    void setweight(double, int);
+    void setWeight(double input_weight, int index);
+    void loadWeight();
 
 
 private:

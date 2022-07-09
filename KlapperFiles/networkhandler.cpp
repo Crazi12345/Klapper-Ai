@@ -13,7 +13,52 @@ NetworkHandler::NetworkHandler(int inputNodeCount,int numberOfLayers,int numberO
 
 }
 
+
 void NetworkHandler::generateNodes(){
+
+    std::vector<Node> temp;
+
+     // Loop to generate the inputLayer
+        std::cout << "Generating Input Layer" << std::endl;
+    for(int i = 0; i<inputNodeCount;i++){
+    Node* n = new Node(0,i);
+    n->loadWeight();
+    temp.push_back(*n);
+    }
+   nodes.push_back(temp);
+
+      //Generate input bias node
+   for(int i = 0; i < 10; i++){
+       float random_weight = (rand()%100 - 50);
+       bias_weight[0][i] = random_weight;
+   }
+
+   // Loop to generate the Hidden Layers
+    std::cout << "Generating Hidden Layer" << std::endl;
+   int tempNumOfNodes = numberOfNodes;
+   for(int i = 1; i<numberOfLayers;i++){
+       temp.clear();
+       for(int j = 0; j<tempNumOfNodes;j++){
+           Node* n = new Node(i,j);
+            n->loadWeight();
+            temp.push_back(*n);
+}
+            nodes.push_back(temp);
+
+   }
+    // making the last output Node
+   Node* n = new Node(nodes.size(),0);
+   temp.clear();
+   temp.push_back(*n);
+   nodes.push_back(temp);
+
+}
+void NetworkHandler::generateRandomWeightNodes(){
+
+    // This is to make sure valueable data do not get deleted;
+    if(CertaintyCheck()){
+        return;
+    }
 
     // Loop to generate the inputLayer
     std::vector<Node> temp;
@@ -22,7 +67,7 @@ void NetworkHandler::generateNodes(){
         Node* n = new Node(0,i);
         for(int weight_index = 0; weight_index < 10; weight_index++){
             float random_weight = (rand()%50 - 25);
-            n->setweight(random_weight, weight_index);
+             n->setWeight(random_weight, weight_index);
 
         }
         temp.push_back(*n);
@@ -46,7 +91,7 @@ void NetworkHandler::generateNodes(){
             Node* n = new Node(i,j);
             for(int weight_index = 0; weight_index < 10; weight_index++){
                 float random_weight = (rand()%100 - 50);
-                n->setweight(random_weight, weight_index);
+                n->setWeight(random_weight, weight_index);
             }
 
             //Generate bias hidden nodes
@@ -183,7 +228,22 @@ float NetworkHandler::CalculateOutput(std::vector<int> &inputs)
 
 }
 
+bool NetworkHandler::CertaintyCheck(){
+    std::string check;
+    std::cout << "Are you sure, this will override the current configuration"<< '\n'
+              << "You may lose progress(yes/no)'\n'" << std::endl;
 
+    std::cin >> check;
+    if(check == "yes"|| check == "y" || check == "YES"|| check == "Yes"|| check == "ja"){
+        return false;
+    }
+    else if(check == "no"|| check == "NO"|| check == "No"|| check == "n" || check == "nej"){
+        return true;
+    }
+    else {
+        CertaintyCheck();
+    }
+}
 double NetworkHandler::sigmoid(double x){
 
     return(1/(1+pow(2.71828,-1*x)));
