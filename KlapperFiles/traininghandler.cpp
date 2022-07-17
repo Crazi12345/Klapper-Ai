@@ -33,13 +33,11 @@ void TrainingHandler::Train(){
 
             input1 = nh.CalculateOutput(input_nn1);
             nh.BackProp(input1, 1);
- 
+
 
 
             input2 = nh.CalculateOutput(input_nn2);
             nh.BackProp(input2, 0);
-
-
 
 
 
@@ -50,6 +48,7 @@ void TrainingHandler::Train(){
 
                 std::cout << "Input 1: "<< input1 << " Input2: "<< input2 << std::endl;
                 nh.UpdateNeuralNetwork(); 
+
             }
         }
 

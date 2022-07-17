@@ -14,6 +14,7 @@ public:
     int getRow();
     int getIndex();
     std::string getId();
+    
     void CommitAVGWeightChange(int samples);
     void setRandomWeight(int numberSpan, int index);
     void AddNewWeightChange(double input_weight, int index);

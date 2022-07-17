@@ -64,7 +64,7 @@ void Node::CommitAVGWeightChange(int samples){
 
     for(int i = 0; i < 10; i++){
 
-        weightsChange[i] /= (double)samples;
+        weightsChange[i] /= samples;
         weights[i] += weightsChange[i];
         weightsChange[i] = 0;
 

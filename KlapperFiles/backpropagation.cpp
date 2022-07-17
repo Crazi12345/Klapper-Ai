@@ -102,9 +102,8 @@ void backpropagation::backpropagate(float clapSound)
                 for(int bias_weight_index = 0; bias_weight_index < weight_count; bias_weight_index++){
                     //Calculcate bias weight
                     //The bias output is 1. -> nonexistent
-                    _bias_weight[i*10 + bias_weight_index] += _bias_weight[i*10 + bias_weight_index] +
-                                                                 (_stepsize * last_layer_sigma[bias_weight_index] *
-                                                                    _bias_weight[i*10 + bias_weight_index] );
+                    _bias_weight[i*10 + bias_weight_index] += (_stepsize * last_layer_sigma[bias_weight_index] *
+                                                              _bias_weight[i*10 + bias_weight_index] );
                 }
             }
 
@@ -115,8 +114,7 @@ void backpropagation::backpropagate(float clapSound)
 
                 float weight_current = _nodes->at(i).at(j).getWeight(weights_index);
 
-                _nodes->at(i).at(j).AddNewWeightChange(weight_current + weight_difference, weights_index);
-
+                _nodes->at(i).at(j).AddNewWeightChange(weight_difference, weights_index);
 
             }
         }
