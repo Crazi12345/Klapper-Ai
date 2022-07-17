@@ -16,7 +16,7 @@ private:
     NetworkHandler nh;
     std::vector<int> input_nn1;
     std::vector<int> input_nn2;
-
+ 
     int train_count = 5000;
     int max_fails = 10;
     float precision = 0.2;

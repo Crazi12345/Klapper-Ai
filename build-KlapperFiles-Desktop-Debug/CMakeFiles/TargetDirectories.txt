@@ -1,0 +1,3 @@
+/home/peter/QTFiles/klapperAI/Klapper-Ai/build-KlapperFiles-Desktop-Debug/CMakeFiles/KlapperNetwork.dir
+/home/peter/QTFiles/klapperAI/Klapper-Ai/build-KlapperFiles-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/peter/QTFiles/klapperAI/Klapper-Ai/build-KlapperFiles-Desktop-Debug/CMakeFiles/rebuild_cache.dir

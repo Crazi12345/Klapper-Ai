@@ -9,6 +9,7 @@ Node::Node()
 }
 
 Node::Node(int row, int index){
+    resetWeightchange();
     this->index = index;
     this->row =row;
 
@@ -34,15 +35,40 @@ std::string Node::getId(){
     return fname+":"+lname;
 }
 
-//Calculate Funtions
-void Node::calculateNewWeight(){
+
+
+
+void Node::AddNewWeightChange(double input_weight, int index)
+{
+ if (index >= 0 && index <= 9) weightsChange[index] += input_weight;
 
 }
 
 
-void Node::setWeight(double input_weight, int index)
-{
- if (index >= 0 && index <= 9) weights[index] = input_weight;
+void Node::resetWeightchange(){
+
+    for(int i = 0; i < 10; i++){
+        weightsChange[i] = 0;
+    }
+
+}
+
+void Node::setRandomWeight(int numberSpan, int index){
+
+    float random_weight = (rand()%(numberSpan) - numberSpan/2);
+    weights[index] = random_weight;
+}
+
+
+void Node::CommitAVGWeightChange(int samples){
+
+    for(int i = 0; i < 10; i++){
+
+        weightsChange[i] /= (double)samples;
+        weights[i] += weightsChange[i];
+        weightsChange[i] = 0;
+
+    }
 
 }
 

@@ -18,6 +18,8 @@ void TrainingHandler::GenerateInputNodes(){
 
 void TrainingHandler::Train(){
     Persistence per;
+    int debug_num = 0;
+
     for(int fails = 0; fails < max_fails; fails++){
 
         std::cout << std::endl;
@@ -27,16 +29,27 @@ void TrainingHandler::Train(){
 
         //First phase training
         for(int train_cycles = 0; train_cycles < train_count + 1; train_cycles++){
+
+
             input1 = nh.CalculateOutput(input_nn1);
             nh.BackProp(input1, 1);
+ 
+
+
             input2 = nh.CalculateOutput(input_nn2);
             nh.BackProp(input2, 0);
+
+
+
 
 
             if(train_cycles%(train_count/10) == 0){
                 float val = train_cycles*100;
                 float val2 = train_count;
                 std::cout << "LOADING: " << (val/val2) << "%" << std::endl;
+
+                std::cout << "Input 1: "<< input1 << " Input2: "<< input2 << std::endl;
+                nh.UpdateNeuralNetwork(); 
             }
         }
 
@@ -72,7 +85,7 @@ void TrainingHandler::Train(){
             std::cout << "TARGET: " << input1 << std::endl;
             std::cout << "NOISE: " << input2 << std::endl;
 
-                 per.saveNodes(nh.getNodes());
+                 //per.saveNodes(nh.getNodes());
         }else{
             std::cout << "NETWORK FAILED: RETRY" << std::endl;
             std::cout << "TARGET: " << input1 << std::endl;

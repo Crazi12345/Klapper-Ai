@@ -24,7 +24,7 @@ private:
     double sigmoid(double x);
     double derivedSigmoid(double x);
     double delta(double x, double y,int switcher);
-    float _stepsize = 0.8;
+    float _stepsize = 0.3;
     std::vector<std::vector<Node>> *_nodes;
 
 

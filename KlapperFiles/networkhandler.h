@@ -15,7 +15,7 @@ public:
     std::vector<std::vector<Node>> getNodes();
     void PrettyPrint();
     void BackProp(float nn_output, float);
-    bool CertaintyCheck();
+    void UpdateNeuralNetwork();
     float CalculateOutput(std::vector<int> &inputs);
 
 private:
@@ -27,10 +27,16 @@ private:
     int numberOfNodes = 0;
 
     float bias_weight[5][10];
+    float bias_weight_change[5][10];
+
+    void bias_weight_change_Clear();
 
     //output data logging
     float startlayer_outputs[500];
     float hiddenlayer_outputs[5][10];
+
+
+    int batchAmount = 0;
 };
 
 #endif // NETWORKHANDLER_H

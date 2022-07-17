@@ -17,8 +17,8 @@ int main()
     //srand((unsigned) time(0));
 
     NetworkHandler nh(500,5,10);
-    nh.generateNodes();
-    //nh.generateRandomWeightNodes();
+    //nh.generateNodes();
+    nh.generateRandomWeightNodes();
 
     TrainingHandler trainer(nh);
     trainer.GenerateInputNodes();

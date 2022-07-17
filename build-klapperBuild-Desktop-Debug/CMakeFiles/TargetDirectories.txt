@@ -1,3 +1,0 @@
-/home/tired_atlas/Desktop/Klapper-Ai/build-klapperBuild-Desktop-Debug/CMakeFiles/KlapperNetwork.dir
-/home/tired_atlas/Desktop/Klapper-Ai/build-klapperBuild-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/tired_atlas/Desktop/Klapper-Ai/build-klapperBuild-Desktop-Debug/CMakeFiles/rebuild_cache.dir

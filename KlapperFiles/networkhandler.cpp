@@ -10,8 +10,10 @@ NetworkHandler::NetworkHandler(int inputNodeCount,int numberOfLayers,int numberO
     this->inputNodeCount = inputNodeCount;
     this->numberOfLayers = numberOfLayers;
     this->numberOfNodes = numberOfNodes;
+    bias_weight_change_Clear();
 
 }
+
 
 
 void NetworkHandler::generateNodes(){
@@ -60,23 +62,16 @@ void NetworkHandler::generateNodes(){
 
 }
 void NetworkHandler::generateRandomWeightNodes(){
-
-    // This is to make sure valueable data do not get deleted;
-  /*  if(CertaintyCheck()){
-        return;
-    }
-*/
-    // Loop to generate the inputLayer
-
     nodes.clear();
+    bias_weight_change_Clear();
 
     std::vector<Node> temp;
     for(int i = 0; i<inputNodeCount;i++){ 
 
         Node* n = new Node(0,i);
         for(int weight_index = 0; weight_index < 10; weight_index++){
-            float random_weight = (rand()%50 - 25);
-             n->setWeight(random_weight, weight_index);
+
+            n->setRandomWeight(20, weight_index);
 
         }
         temp.push_back(*n);
@@ -99,8 +94,7 @@ void NetworkHandler::generateRandomWeightNodes(){
         for(int j = 0; j<tempNumOfNodes;j++){
             Node* n = new Node(i,j);
             for(int weight_index = 0; weight_index < 10; weight_index++){
-                float random_weight = (rand()%100 - 50);
-                n->setWeight(random_weight, weight_index);
+                n->setRandomWeight(100, weight_index);
             }
 
             //Generate bias hidden nodes
@@ -123,6 +117,18 @@ void NetworkHandler::generateRandomWeightNodes(){
     nodes.push_back(temp);
 
 
+}
+
+void NetworkHandler::bias_weight_change_Clear(){
+
+    int array_size        = sizeof(bias_weight_change)/sizeof(bias_weight_change[0]);
+    int double_array_size = sizeof(bias_weight_change[0])/sizeof(bias_weight_change[0][0]);
+
+    for(int i = 0; i < array_size; i++){
+        for(int j = 0; j < double_array_size; j++){
+            bias_weight_change[i][j] = 0;
+        }
+    }
 }
 
 std::vector<std::vector<Node>> NetworkHandler::getNodes(){
@@ -153,11 +159,42 @@ void NetworkHandler::PrettyPrint(){
 
 void NetworkHandler::BackProp(float nn_output, float clapSound)
 {
-
-    backpropagation bp(&nodes, startlayer_outputs, &(hiddenlayer_outputs[0][0]), &nn_output, &(bias_weight[0][0]));
+    batchAmount++;
+    backpropagation bp(&nodes, startlayer_outputs, &(hiddenlayer_outputs[0][0]), &nn_output, &(bias_weight_change[0][0]));
     bp.backpropagate(clapSound);
 
 }
+
+void NetworkHandler::UpdateNeuralNetwork()
+{
+
+
+for(int i = 0; i < nodes.size(); i++){
+
+    for(int j = 0; j < nodes.at(i).size(); j++){
+        nodes.at(i).at(j).CommitAVGWeightChange(batchAmount);
+    }
+
+}
+
+
+
+int array_size        = sizeof(bias_weight_change)/sizeof(bias_weight_change[0]);
+int double_array_size = sizeof(bias_weight_change[0])/sizeof(bias_weight_change[0][0]);
+
+for(int i = 0; i < array_size; i++){
+    for(int j = 0; j < double_array_size; j++){
+        bias_weight_change[i][j] /= batchAmount;
+        bias_weight[i][j] += bias_weight_change[i][j];
+
+        bias_weight_change[i][j] = 0;
+    }
+}
+
+batchAmount = 0;
+
+}
+
 
 float NetworkHandler::CalculateOutput(std::vector<int> &inputs)
 {
@@ -237,22 +274,7 @@ float NetworkHandler::CalculateOutput(std::vector<int> &inputs)
 
 }
 
-bool NetworkHandler::CertaintyCheck(){
-    std::string check;
-    std::cout << "Are you sure, this will override the current configuration"<< '\n'
-              << "You may lose progress(yes/no)'\n'" << std::endl;
 
-    std::cin >> check;
-    if(check == "yes"|| check == "y" || check == "YES"|| check == "Yes"|| check == "ja"){
-        return false;
-    }
-    else if(check == "no"|| check == "NO"|| check == "No"|| check == "n" || check == "nej"){
-        return true;
-    }
-    else {
-        CertaintyCheck();
-    }
-}
 double NetworkHandler::sigmoid(double x){
 
     return(1/(1+pow(2.71828,-1*x)));
