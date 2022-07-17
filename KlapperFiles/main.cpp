@@ -23,8 +23,11 @@ int main()
     TrainingHandler trainer(nh);
     trainer.GenerateInputNodes();
     trainer.Train();
-
-
+    Persistence per;
+    cout << "Data Below" << endl;
+    per.getDataRow();
+   per.moveTrainedDataBack();
+    cout << "Data Above" << endl;
     return 0;
 }
 
