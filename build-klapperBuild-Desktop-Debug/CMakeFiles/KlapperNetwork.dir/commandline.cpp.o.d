@@ -1,6 +1,8 @@
-CMakeFiles/KlapperNetwork.dir/main.cpp.o: \
- /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
+CMakeFiles/KlapperNetwork.dir/commandline.cpp.o: \
+ /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/commandline.cpp \
+ /usr/include/stdc-predef.h \
+ /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/commandline.h \
+ /usr/include/c++/12/iostream \
  /usr/include/c++/12/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/12/x86_64-redhat-linux/bits/os_defines.h \
@@ -235,107 +237,5 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: \
  /usr/include/pqxx/stream_to /usr/include/pqxx/stream_to.hxx \
  /usr/include/pqxx/subtransaction /usr/include/pqxx/subtransaction.hxx \
  /usr/include/pqxx/transaction /usr/include/pqxx/transactor \
- /usr/include/pqxx/transactor.hxx /usr/include/c++/12/fstream \
- /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h \
- /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h \
- /usr/include/c++/12/bits/fstream.tcc \
- /usr/include/c++/12/x86_64-redhat-linux/bits/stdc++.h \
- /usr/include/c++/12/cfloat \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/float.h \
- /usr/include/c++/12/climits \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/limits.h \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/syslimits.h \
- /usr/include/limits.h /usr/include/bits/posix1_lim.h \
- /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/uio_lim.h /usr/include/c++/12/cmath \
- /usr/include/math.h /usr/include/bits/math-vector.h \
- /usr/include/bits/libm-simd-decl-stubs.h \
- /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
- /usr/include/bits/fp-fast.h \
- /usr/include/bits/mathcalls-helper-functions.h \
- /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h /usr/include/c++/12/bits/specfun.h \
- /usr/include/c++/12/tr1/gamma.tcc \
- /usr/include/c++/12/tr1/special_function_util.h \
- /usr/include/c++/12/tr1/bessel_function.tcc \
- /usr/include/c++/12/tr1/beta_function.tcc \
- /usr/include/c++/12/tr1/ell_integral.tcc \
- /usr/include/c++/12/tr1/exp_integral.tcc \
- /usr/include/c++/12/tr1/hypergeometric.tcc \
- /usr/include/c++/12/tr1/legendre_function.tcc \
- /usr/include/c++/12/tr1/modified_bessel_func.tcc \
- /usr/include/c++/12/tr1/poly_hermite.tcc \
- /usr/include/c++/12/tr1/poly_laguerre.tcc \
- /usr/include/c++/12/tr1/riemann_zeta.tcc /usr/include/c++/12/csetjmp \
- /usr/include/setjmp.h /usr/include/c++/12/csignal /usr/include/signal.h \
- /usr/include/bits/signum-generic.h /usr/include/bits/signum-arch.h \
- /usr/include/bits/types/sig_atomic_t.h \
- /usr/include/bits/types/siginfo_t.h /usr/include/bits/types/__sigval_t.h \
- /usr/include/bits/siginfo-arch.h /usr/include/bits/siginfo-consts.h \
- /usr/include/bits/siginfo-consts-arch.h \
- /usr/include/bits/types/sigval_t.h /usr/include/bits/types/sigevent_t.h \
- /usr/include/bits/sigevent-consts.h /usr/include/bits/sigaction.h \
- /usr/include/bits/sigcontext.h /usr/include/bits/types/stack_t.h \
- /usr/include/sys/ucontext.h /usr/include/bits/sigstack.h \
- /usr/include/bits/sigstksz.h /usr/include/unistd.h \
- /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
- /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
- /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/bits/ss_flags.h \
- /usr/include/bits/types/struct_sigstack.h /usr/include/bits/sigthread.h \
- /usr/include/bits/signal_ext.h /usr/include/c++/12/cstdarg \
- /usr/include/c++/12/ccomplex /usr/include/c++/12/complex \
- /usr/include/c++/12/cfenv /usr/include/c++/12/fenv.h /usr/include/fenv.h \
- /usr/include/bits/fenv.h /usr/include/c++/12/cinttypes \
- /usr/include/inttypes.h /usr/include/c++/12/cstdalign \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/stdalign.h \
- /usr/include/c++/12/cstdbool \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /usr/include/c++/12/ctgmath /usr/include/c++/12/cuchar \
- /usr/include/uchar.h /usr/include/c++/12/bitset \
- /usr/include/c++/12/deque /usr/include/c++/12/bits/stl_deque.h \
- /usr/include/c++/12/bits/deque.tcc /usr/include/c++/12/queue \
- /usr/include/c++/12/bits/stl_queue.h /usr/include/c++/12/set \
- /usr/include/c++/12/bits/stl_set.h \
- /usr/include/c++/12/bits/stl_multiset.h /usr/include/c++/12/stack \
- /usr/include/c++/12/bits/stl_stack.h /usr/include/c++/12/valarray \
- /usr/include/c++/12/bits/valarray_array.h \
- /usr/include/c++/12/bits/valarray_array.tcc \
- /usr/include/c++/12/bits/valarray_before.h \
- /usr/include/c++/12/bits/slice_array.h \
- /usr/include/c++/12/bits/valarray_after.h \
- /usr/include/c++/12/bits/gslice.h \
- /usr/include/c++/12/bits/gslice_array.h \
- /usr/include/c++/12/bits/mask_array.h \
- /usr/include/c++/12/bits/indirect_array.h /usr/include/c++/12/atomic \
- /usr/include/c++/12/chrono /usr/include/c++/12/condition_variable \
- /usr/include/c++/12/bits/std_mutex.h \
- /usr/include/c++/12/bits/unique_lock.h /usr/include/c++/12/forward_list \
- /usr/include/c++/12/bits/forward_list.h \
- /usr/include/c++/12/bits/forward_list.tcc /usr/include/c++/12/future \
- /usr/include/c++/12/mutex /usr/include/c++/12/bits/atomic_futex.h \
- /usr/include/c++/12/bits/std_thread.h /usr/include/c++/12/random \
- /usr/include/c++/12/bits/random.h \
- /usr/include/c++/12/x86_64-redhat-linux/bits/opt_random.h \
- /usr/include/c++/12/bits/random.tcc /usr/include/c++/12/regex \
- /usr/include/c++/12/bits/regex_constants.h \
- /usr/include/c++/12/bits/regex_error.h \
- /usr/include/c++/12/bits/regex_automaton.h \
- /usr/include/c++/12/bits/regex_automaton.tcc \
- /usr/include/c++/12/bits/regex_scanner.h \
- /usr/include/c++/12/bits/regex_scanner.tcc \
- /usr/include/c++/12/bits/regex_compiler.h \
- /usr/include/c++/12/bits/regex_compiler.tcc \
- /usr/include/c++/12/bits/regex.h /usr/include/c++/12/bits/regex.tcc \
- /usr/include/c++/12/bits/regex_executor.h \
- /usr/include/c++/12/bits/regex_executor.tcc \
- /usr/include/c++/12/scoped_allocator /usr/include/c++/12/thread \
- /usr/include/c++/12/bits/this_thread_sleep.h \
- /usr/include/c++/12/typeindex /usr/include/c++/12/unordered_set \
- /usr/include/c++/12/bits/unordered_set.h \
- /usr/include/c++/12/shared_mutex /usr/include/c++/12/any \
- /usr/include/c++/12/memory_resource \
- /usr/include/c++/12/bits/uses_allocator_args.h \
- /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/traininghandler.h \
- /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/commandline.h
+ /usr/include/pqxx/transactor.hxx \
+ /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/traininghandler.h

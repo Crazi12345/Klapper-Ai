@@ -7,26 +7,17 @@
 #include "persistence.h"
 #include <pqxx/pqxx>
 #include "traininghandler.h"
-
+#include "commandline.h"
 using namespace std;
 int main()
 {
 
 
 
-    //srand((unsigned) time(0));
 
-    NetworkHandler nh(500,5,10);
-    nh.generateNodes();
-    //nh.generateRandomWeightNodes();
+    CommandLine();
 
-    TrainingHandler trainer(nh);
-    trainer.GenerateInputNodes();
-    trainer.Train();
-    Persistence per;
 
-    per.getDataRow();
-   per.moveTrainedDataBack();
 
     return 0;
 }

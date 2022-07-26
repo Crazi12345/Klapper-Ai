@@ -12,4 +12,5 @@ networkhandler.h networkhandler.cpp
 backpropagation.h backpropagation.cpp
 persistence.h persistence.cpp
 traininghandler.h traininghandler.cpp
+commandline.h commandline.cpp
 )
