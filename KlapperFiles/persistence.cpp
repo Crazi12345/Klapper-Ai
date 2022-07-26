@@ -43,10 +43,7 @@ std::vector<long> Persistence::loadNode(std::string nodeId)
 
 }
   //  std::cout << iterationNum<< std::endl;
-    if(iterationNum%5==0){
-       double procent = (iterationNum/540)*100;
-       std::cout << "generating nodes at: "<< procent << "%" << std::endl;
-    }
+
 
 
     std::vector<long> found_messages;

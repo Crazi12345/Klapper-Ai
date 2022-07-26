@@ -413,17 +413,169 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/12/bits/stl_bvector.h \
   /usr/include/c++/12/bits/vector.tcc \
   /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/backpropagation.h \
-  /usr/include/c++/12/fstream \
+  /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/persistence.h \
+  /usr/include/pqxx/pqxx \
+  /usr/include/pqxx/array \
+  /usr/include/pqxx/internal/compiler-internal-pre.hxx \
+  /usr/include/pqxx/internal/compiler-public.hxx \
+  /usr/include/pqxx/config-public-compiler.h \
+  /usr/include/c++/12/ciso646 \
+  /usr/include/pqxx/array.hxx \
+  /usr/include/pqxx/internal/encoding_group.hxx \
+  /usr/include/c++/12/cstddef \
+  /usr/include/pqxx/internal/encodings.hxx \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/pqxx/internal/compiler-internal-post.hxx \
+  /usr/include/pqxx/binarystring \
+  /usr/include/pqxx/binarystring.hxx \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/backward/auto_ptr.h \
+  /usr/include/c++/12/pstl/glue_memory_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h \
+  /usr/include/pqxx/result.hxx \
+  /usr/include/pqxx/except.hxx \
+  /usr/include/pqxx/types.hxx \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/pqxx/util.hxx \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/version \
+  /usr/include/pqxx/version.hxx \
+  /usr/include/pqxx/internal/libpq-forward.hxx \
+  /usr/include/pqxx/zview.hxx \
+  /usr/include/pqxx/strconv.hxx \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/cstring \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/charconv \
+  /usr/include/pqxx/internal/conversions.hxx \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/optional \
+  /usr/include/c++/12/variant \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/pqxx/internal/ignore-deprecated-pre.hxx \
+  /usr/include/pqxx/internal/ignore-deprecated-post.hxx \
+  /usr/include/pqxx/blob \
+  /usr/include/pqxx/blob.hxx \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/time_members.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h \
+  /usr/include/libintl.h \
   /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/pqxx/dbtransaction.hxx \
+  /usr/include/pqxx/transaction_base.hxx \
+  /usr/include/pqxx/connection.hxx \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/pqxx/errorhandler.hxx \
+  /usr/include/pqxx/internal/concat.hxx \
+  /usr/include/pqxx/params.hxx \
+  /usr/include/pqxx/internal/statement_parameters.hxx \
+  /usr/include/pqxx/strconv \
+  /usr/include/pqxx/util \
+  /usr/include/pqxx/separated_list.hxx \
+  /usr/include/pqxx/isolation.hxx \
+  /usr/include/pqxx/row.hxx \
+  /usr/include/pqxx/field.hxx \
+  /usr/include/pqxx/composite.hxx \
+  /usr/include/pqxx/internal/array-composite.hxx \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
+  /usr/include/pqxx/stream_from.hxx \
+  /usr/include/pqxx/internal/stream_iterator.hxx \
+  /usr/include/pqxx/transaction_focus.hxx \
+  /usr/include/pqxx/connection \
+  /usr/include/pqxx/cursor \
+  /usr/include/pqxx/cursor.hxx \
+  /usr/include/pqxx/internal/sql_cursor.hxx \
+  /usr/include/pqxx/errorhandler \
+  /usr/include/pqxx/except \
+  /usr/include/pqxx/largeobject \
+  /usr/include/pqxx/largeobject.hxx \
+  /usr/include/pqxx/nontransaction \
+  /usr/include/pqxx/nontransaction.hxx \
+  /usr/include/pqxx/transaction.hxx \
+  /usr/include/pqxx/notification \
+  /usr/include/pqxx/notification.hxx \
+  /usr/include/pqxx/params \
+  /usr/include/pqxx/pipeline \
+  /usr/include/pqxx/pipeline.hxx \
+  /usr/include/pqxx/prepared_statement \
+  /usr/include/pqxx/params.hxx \
+  /usr/include/pqxx/result \
+  /usr/include/pqxx/internal/result_iterator.hxx \
+  /usr/include/pqxx/internal/result_iter.hxx \
+  /usr/include/pqxx/robusttransaction \
+  /usr/include/pqxx/robusttransaction.hxx \
+  /usr/include/pqxx/stream_from \
+  /usr/include/pqxx/stream_to \
+  /usr/include/pqxx/stream_to.hxx \
+  /usr/include/pqxx/subtransaction \
+  /usr/include/pqxx/subtransaction.hxx \
+  /usr/include/pqxx/transaction \
+  /usr/include/pqxx/transactor \
+  /usr/include/pqxx/transactor.hxx \
+  /usr/include/c++/12/fstream \
   /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h \
   /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h \
   /usr/include/c++/12/bits/fstream.tcc \
   /usr/include/c++/12/x86_64-redhat-linux/bits/stdc++.h \
-  /usr/include/c++/12/cassert \
-  /usr/include/assert.h \
   /usr/include/c++/12/cfloat \
   /usr/lib/gcc/x86_64-redhat-linux/12/include/float.h \
-  /usr/include/c++/12/ciso646 \
   /usr/include/c++/12/climits \
   /usr/lib/gcc/x86_64-redhat-linux/12/include/limits.h \
   /usr/lib/gcc/x86_64-redhat-linux/12/include/syslimits.h \
@@ -446,7 +598,6 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/iscanonical.h \
   /usr/include/c++/12/bits/specfun.h \
-  /usr/include/c++/12/limits \
   /usr/include/c++/12/tr1/gamma.tcc \
   /usr/include/c++/12/tr1/special_function_util.h \
   /usr/include/c++/12/tr1/bessel_function.tcc \
@@ -493,13 +644,8 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/bits/sigthread.h \
   /usr/include/bits/signal_ext.h \
   /usr/include/c++/12/cstdarg \
-  /usr/include/c++/12/cstddef \
-  /usr/include/c++/12/cstring \
-  /usr/include/c++/12/ctime \
   /usr/include/c++/12/ccomplex \
   /usr/include/c++/12/complex \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/cfenv \
   /usr/include/c++/12/fenv.h \
   /usr/include/fenv.h \
@@ -513,67 +659,10 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/12/ctgmath \
   /usr/include/c++/12/cuchar \
   /usr/include/uchar.h \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/stl_algo.h \
-  /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_heap.h \
-  /usr/include/c++/12/bits/stl_tempbuf.h \
-  /usr/include/c++/12/bits/uniform_int_dist.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/pstl/execution_defs.h \
   /usr/include/c++/12/bitset \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  /usr/include/c++/12/functional \
-  /usr/include/c++/12/tuple \
-  /usr/include/c++/12/bits/uses_allocator.h \
-  /usr/include/c++/12/bits/std_function.h \
-  /usr/include/c++/12/unordered_map \
-  /usr/include/c++/12/ext/aligned_buffer.h \
-  /usr/include/c++/12/bits/hashtable.h \
-  /usr/include/c++/12/bits/hashtable_policy.h \
-  /usr/include/c++/12/bits/enable_special_members.h \
-  /usr/include/c++/12/bits/node_handle.h \
-  /usr/include/c++/12/bits/unordered_map.h \
-  /usr/include/c++/12/bits/erase_if.h \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/iomanip \
-  /usr/include/c++/12/locale \
-  /usr/include/c++/12/bits/locale_facets_nonio.h \
-  /usr/include/c++/12/x86_64-redhat-linux/bits/time_members.h \
-  /usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/12/bits/locale_conv.h \
-  /usr/include/c++/12/bits/quoted_string.h \
-  /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/allocated_ptr.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/memory \
-  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/12/bits/align.h \
-  /usr/include/c++/12/bit \
-  /usr/include/c++/12/bits/unique_ptr.h \
-  /usr/include/c++/12/bits/shared_ptr.h \
-  /usr/include/c++/12/bits/shared_ptr_base.h \
-  /usr/include/c++/12/ext/concurrence.h \
-  /usr/include/c++/12/bits/shared_ptr_atomic.h \
-  /usr/include/c++/12/bits/atomic_base.h \
-  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/12/backward/auto_ptr.h \
-  /usr/include/c++/12/pstl/glue_memory_defs.h \
-  /usr/include/c++/12/numeric \
-  /usr/include/c++/12/bits/stl_numeric.h \
-  /usr/include/c++/12/pstl/glue_numeric_defs.h \
   /usr/include/c++/12/queue \
   /usr/include/c++/12/bits/stl_queue.h \
   /usr/include/c++/12/set \
@@ -581,8 +670,6 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/12/bits/stl_multiset.h \
   /usr/include/c++/12/stack \
   /usr/include/c++/12/bits/stl_stack.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
   /usr/include/c++/12/valarray \
   /usr/include/c++/12/bits/valarray_array.h \
   /usr/include/c++/12/bits/valarray_array.tcc \
@@ -595,10 +682,6 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/12/bits/indirect_array.h \
   /usr/include/c++/12/atomic \
   /usr/include/c++/12/chrono \
-  /usr/include/c++/12/bits/chrono.h \
-  /usr/include/c++/12/ratio \
-  /usr/include/c++/12/bits/parse_numbers.h \
-  /usr/include/c++/12/codecvt \
   /usr/include/c++/12/condition_variable \
   /usr/include/c++/12/bits/std_mutex.h \
   /usr/include/c++/12/bits/unique_lock.h \
@@ -634,91 +717,8 @@ CMakeFiles/KlapperNetwork.dir/main.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/12/bits/unordered_set.h \
   /usr/include/c++/12/shared_mutex \
   /usr/include/c++/12/any \
-  /usr/include/c++/12/charconv \
-  /usr/include/c++/12/filesystem \
-  /usr/include/c++/12/bits/fs_fwd.h \
-  /usr/include/c++/12/bits/fs_path.h \
-  /usr/include/c++/12/bits/fs_dir.h \
-  /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/optional \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/bits/uses_allocator_args.h \
-  /usr/include/c++/12/variant \
-  /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/persistence.h \
-  /usr/include/pqxx/pqxx \
-  /usr/include/pqxx/array \
-  /usr/include/pqxx/internal/compiler-internal-pre.hxx \
-  /usr/include/pqxx/internal/compiler-public.hxx \
-  /usr/include/pqxx/config-public-compiler.h \
-  /usr/include/pqxx/array.hxx \
-  /usr/include/pqxx/internal/encoding_group.hxx \
-  /usr/include/pqxx/internal/encodings.hxx \
-  /usr/include/pqxx/internal/compiler-internal-post.hxx \
-  /usr/include/pqxx/binarystring \
-  /usr/include/pqxx/binarystring.hxx \
-  /usr/include/pqxx/result.hxx \
-  /usr/include/pqxx/except.hxx \
-  /usr/include/pqxx/types.hxx \
-  /usr/include/pqxx/util.hxx \
-  /usr/include/c++/12/version \
-  /usr/include/pqxx/version.hxx \
-  /usr/include/pqxx/internal/libpq-forward.hxx \
-  /usr/include/pqxx/zview.hxx \
-  /usr/include/pqxx/strconv.hxx \
-  /usr/include/pqxx/internal/conversions.hxx \
-  /usr/include/pqxx/internal/ignore-deprecated-pre.hxx \
-  /usr/include/pqxx/internal/ignore-deprecated-post.hxx \
-  /usr/include/pqxx/blob \
-  /usr/include/pqxx/blob.hxx \
-  /usr/include/pqxx/dbtransaction.hxx \
-  /usr/include/pqxx/transaction_base.hxx \
-  /usr/include/pqxx/connection.hxx \
-  /usr/include/pqxx/errorhandler.hxx \
-  /usr/include/pqxx/internal/concat.hxx \
-  /usr/include/pqxx/params.hxx \
-  /usr/include/pqxx/internal/statement_parameters.hxx \
-  /usr/include/pqxx/strconv \
-  /usr/include/pqxx/util \
-  /usr/include/pqxx/separated_list.hxx \
-  /usr/include/pqxx/isolation.hxx \
-  /usr/include/pqxx/row.hxx \
-  /usr/include/pqxx/field.hxx \
-  /usr/include/pqxx/composite.hxx \
-  /usr/include/pqxx/internal/array-composite.hxx \
-  /usr/include/pqxx/stream_from.hxx \
-  /usr/include/pqxx/internal/stream_iterator.hxx \
-  /usr/include/pqxx/transaction_focus.hxx \
-  /usr/include/pqxx/connection \
-  /usr/include/pqxx/cursor \
-  /usr/include/pqxx/cursor.hxx \
-  /usr/include/pqxx/internal/sql_cursor.hxx \
-  /usr/include/pqxx/errorhandler \
-  /usr/include/pqxx/except \
-  /usr/include/pqxx/largeobject \
-  /usr/include/pqxx/largeobject.hxx \
-  /usr/include/pqxx/nontransaction \
-  /usr/include/pqxx/nontransaction.hxx \
-  /usr/include/pqxx/transaction.hxx \
-  /usr/include/pqxx/notification \
-  /usr/include/pqxx/notification.hxx \
-  /usr/include/pqxx/params \
-  /usr/include/pqxx/pipeline \
-  /usr/include/pqxx/pipeline.hxx \
-  /usr/include/pqxx/prepared_statement \
-  /usr/include/pqxx/params.hxx \
-  /usr/include/pqxx/result \
-  /usr/include/pqxx/internal/result_iterator.hxx \
-  /usr/include/pqxx/internal/result_iter.hxx \
-  /usr/include/pqxx/robusttransaction \
-  /usr/include/pqxx/robusttransaction.hxx \
-  /usr/include/pqxx/stream_from \
-  /usr/include/pqxx/stream_to \
-  /usr/include/pqxx/stream_to.hxx \
-  /usr/include/pqxx/subtransaction \
-  /usr/include/pqxx/subtransaction.hxx \
-  /usr/include/pqxx/transaction \
-  /usr/include/pqxx/transactor \
-  /usr/include/pqxx/transactor.hxx \
   /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/traininghandler.h
 
 CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/networkhandler.cpp \
@@ -914,6 +914,162 @@ CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o: /home/tired_atlas/Desktop/Kl
   /usr/include/c++/12/bits/stl_bvector.h \
   /usr/include/c++/12/bits/vector.tcc \
   /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/backpropagation.h \
+  /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/persistence.h \
+  /usr/include/pqxx/pqxx \
+  /usr/include/pqxx/array \
+  /usr/include/pqxx/internal/compiler-internal-pre.hxx \
+  /usr/include/pqxx/internal/compiler-public.hxx \
+  /usr/include/pqxx/config-public-compiler.h \
+  /usr/include/c++/12/ciso646 \
+  /usr/include/pqxx/array.hxx \
+  /usr/include/pqxx/internal/encoding_group.hxx \
+  /usr/include/c++/12/cstddef \
+  /usr/include/pqxx/internal/encodings.hxx \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/pqxx/internal/compiler-internal-post.hxx \
+  /usr/include/pqxx/binarystring \
+  /usr/include/pqxx/binarystring.hxx \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/backward/auto_ptr.h \
+  /usr/include/c++/12/pstl/glue_memory_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h \
+  /usr/include/pqxx/result.hxx \
+  /usr/include/pqxx/except.hxx \
+  /usr/include/pqxx/types.hxx \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/pqxx/util.hxx \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/version \
+  /usr/include/pqxx/version.hxx \
+  /usr/include/pqxx/internal/libpq-forward.hxx \
+  /usr/include/pqxx/zview.hxx \
+  /usr/include/pqxx/strconv.hxx \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/cstring \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/charconv \
+  /usr/include/pqxx/internal/conversions.hxx \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/optional \
+  /usr/include/c++/12/variant \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/pqxx/internal/ignore-deprecated-pre.hxx \
+  /usr/include/pqxx/internal/ignore-deprecated-post.hxx \
+  /usr/include/pqxx/blob \
+  /usr/include/pqxx/blob.hxx \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/time_members.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/pqxx/dbtransaction.hxx \
+  /usr/include/pqxx/transaction_base.hxx \
+  /usr/include/pqxx/connection.hxx \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/pqxx/errorhandler.hxx \
+  /usr/include/pqxx/internal/concat.hxx \
+  /usr/include/pqxx/params.hxx \
+  /usr/include/pqxx/internal/statement_parameters.hxx \
+  /usr/include/pqxx/strconv \
+  /usr/include/pqxx/util \
+  /usr/include/pqxx/separated_list.hxx \
+  /usr/include/pqxx/isolation.hxx \
+  /usr/include/pqxx/row.hxx \
+  /usr/include/pqxx/field.hxx \
+  /usr/include/pqxx/composite.hxx \
+  /usr/include/pqxx/internal/array-composite.hxx \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
+  /usr/include/pqxx/stream_from.hxx \
+  /usr/include/pqxx/internal/stream_iterator.hxx \
+  /usr/include/pqxx/transaction_focus.hxx \
+  /usr/include/pqxx/connection \
+  /usr/include/pqxx/cursor \
+  /usr/include/pqxx/cursor.hxx \
+  /usr/include/pqxx/internal/sql_cursor.hxx \
+  /usr/include/pqxx/errorhandler \
+  /usr/include/pqxx/except \
+  /usr/include/pqxx/largeobject \
+  /usr/include/pqxx/largeobject.hxx \
+  /usr/include/pqxx/nontransaction \
+  /usr/include/pqxx/nontransaction.hxx \
+  /usr/include/pqxx/transaction.hxx \
+  /usr/include/pqxx/notification \
+  /usr/include/pqxx/notification.hxx \
+  /usr/include/pqxx/params \
+  /usr/include/pqxx/pipeline \
+  /usr/include/pqxx/pipeline.hxx \
+  /usr/include/pqxx/prepared_statement \
+  /usr/include/pqxx/params.hxx \
+  /usr/include/pqxx/result \
+  /usr/include/pqxx/internal/result_iterator.hxx \
+  /usr/include/pqxx/internal/result_iter.hxx \
+  /usr/include/pqxx/robusttransaction \
+  /usr/include/pqxx/robusttransaction.hxx \
+  /usr/include/pqxx/stream_from \
+  /usr/include/pqxx/stream_to \
+  /usr/include/pqxx/stream_to.hxx \
+  /usr/include/pqxx/subtransaction \
+  /usr/include/pqxx/subtransaction.hxx \
+  /usr/include/pqxx/transaction \
+  /usr/include/pqxx/transactor \
+  /usr/include/pqxx/transactor.hxx \
   /usr/include/c++/12/math.h \
   /usr/include/c++/12/cmath \
   /usr/include/math.h \
@@ -927,7 +1083,6 @@ CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o: /home/tired_atlas/Desktop/Kl
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/iscanonical.h \
   /usr/include/c++/12/bits/specfun.h \
-  /usr/include/c++/12/limits \
   /usr/include/c++/12/tr1/gamma.tcc \
   /usr/include/c++/12/tr1/special_function_util.h \
   /usr/include/c++/12/tr1/bessel_function.tcc \
@@ -1127,6 +1282,11 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/vector.tcc \
   /usr/include/c++/12/math.h \
   /usr/include/c++/12/cmath \
   /usr/include/math.h \
@@ -1152,167 +1312,7 @@ CMakeFiles/KlapperNetwork.dir/node.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/K
   /usr/include/c++/12/tr1/modified_bessel_func.tcc \
   /usr/include/c++/12/tr1/poly_hermite.tcc \
   /usr/include/c++/12/tr1/poly_laguerre.tcc \
-  /usr/include/c++/12/tr1/riemann_zeta.tcc \
-  /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/persistence.h \
-  /usr/include/pqxx/pqxx \
-  /usr/include/pqxx/array \
-  /usr/include/pqxx/internal/compiler-internal-pre.hxx \
-  /usr/include/pqxx/internal/compiler-public.hxx \
-  /usr/include/pqxx/config-public-compiler.h \
-  /usr/include/c++/12/ciso646 \
-  /usr/include/pqxx/array.hxx \
-  /usr/include/pqxx/internal/encoding_group.hxx \
-  /usr/include/c++/12/cstddef \
-  /usr/include/pqxx/internal/encodings.hxx \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
-  /usr/include/pqxx/internal/compiler-internal-post.hxx \
-  /usr/include/pqxx/binarystring \
-  /usr/include/pqxx/binarystring.hxx \
-  /usr/include/c++/12/memory \
-  /usr/include/c++/12/bits/stl_uninitialized.h \
-  /usr/include/c++/12/bits/stl_tempbuf.h \
-  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/12/bits/align.h \
-  /usr/include/c++/12/bit \
-  /usr/include/c++/12/bits/uses_allocator.h \
-  /usr/include/c++/12/bits/unique_ptr.h \
-  /usr/include/c++/12/tuple \
-  /usr/include/c++/12/bits/shared_ptr.h \
-  /usr/include/c++/12/bits/shared_ptr_base.h \
-  /usr/include/c++/12/bits/allocated_ptr.h \
-  /usr/include/c++/12/ext/aligned_buffer.h \
-  /usr/include/c++/12/ext/concurrence.h \
-  /usr/include/c++/12/bits/shared_ptr_atomic.h \
-  /usr/include/c++/12/bits/atomic_base.h \
-  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/12/backward/auto_ptr.h \
-  /usr/include/c++/12/pstl/glue_memory_defs.h \
-  /usr/include/c++/12/pstl/execution_defs.h \
-  /usr/include/pqxx/result.hxx \
-  /usr/include/pqxx/except.hxx \
-  /usr/include/pqxx/types.hxx \
-  /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h \
-  /usr/include/pqxx/util.hxx \
-  /usr/include/c++/12/functional \
-  /usr/include/c++/12/bits/std_function.h \
-  /usr/include/c++/12/unordered_map \
-  /usr/include/c++/12/bits/hashtable.h \
-  /usr/include/c++/12/bits/hashtable_policy.h \
-  /usr/include/c++/12/bits/enable_special_members.h \
-  /usr/include/c++/12/bits/node_handle.h \
-  /usr/include/c++/12/bits/unordered_map.h \
-  /usr/include/c++/12/bits/erase_if.h \
-  /usr/include/c++/12/vector \
-  /usr/include/c++/12/bits/stl_vector.h \
-  /usr/include/c++/12/bits/stl_bvector.h \
-  /usr/include/c++/12/bits/vector.tcc \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/bits/stl_algo.h \
-  /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_heap.h \
-  /usr/include/c++/12/bits/uniform_int_dist.h \
-  /usr/include/c++/12/version \
-  /usr/include/pqxx/version.hxx \
-  /usr/include/pqxx/internal/libpq-forward.hxx \
-  /usr/include/pqxx/zview.hxx \
-  /usr/include/pqxx/strconv.hxx \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/cstring \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/bits/sstream.tcc \
-  /usr/include/c++/12/charconv \
-  /usr/include/pqxx/internal/conversions.hxx \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/numeric \
-  /usr/include/c++/12/bits/stl_numeric.h \
-  /usr/include/c++/12/pstl/glue_numeric_defs.h \
-  /usr/include/c++/12/optional \
-  /usr/include/c++/12/variant \
-  /usr/include/c++/12/bits/parse_numbers.h \
-  /usr/include/pqxx/internal/ignore-deprecated-pre.hxx \
-  /usr/include/pqxx/internal/ignore-deprecated-post.hxx \
-  /usr/include/pqxx/blob \
-  /usr/include/pqxx/blob.hxx \
-  /usr/include/c++/12/filesystem \
-  /usr/include/c++/12/bits/fs_fwd.h \
-  /usr/include/c++/12/bits/chrono.h \
-  /usr/include/c++/12/ratio \
-  /usr/include/c++/12/ctime \
-  /usr/include/c++/12/bits/fs_path.h \
-  /usr/include/c++/12/locale \
-  /usr/include/c++/12/bits/locale_facets_nonio.h \
-  /usr/include/c++/12/x86_64-redhat-linux/bits/time_members.h \
-  /usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/12/bits/locale_conv.h \
-  /usr/include/c++/12/iomanip \
-  /usr/include/c++/12/bits/quoted_string.h \
-  /usr/include/c++/12/codecvt \
-  /usr/include/c++/12/bits/fs_dir.h \
-  /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/pqxx/dbtransaction.hxx \
-  /usr/include/pqxx/transaction_base.hxx \
-  /usr/include/pqxx/connection.hxx \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/pqxx/errorhandler.hxx \
-  /usr/include/pqxx/internal/concat.hxx \
-  /usr/include/pqxx/params.hxx \
-  /usr/include/pqxx/internal/statement_parameters.hxx \
-  /usr/include/pqxx/strconv \
-  /usr/include/pqxx/util \
-  /usr/include/pqxx/separated_list.hxx \
-  /usr/include/pqxx/isolation.hxx \
-  /usr/include/pqxx/row.hxx \
-  /usr/include/pqxx/field.hxx \
-  /usr/include/pqxx/composite.hxx \
-  /usr/include/pqxx/internal/array-composite.hxx \
-  /usr/include/c++/12/cassert \
-  /usr/include/assert.h \
-  /usr/include/pqxx/stream_from.hxx \
-  /usr/include/pqxx/internal/stream_iterator.hxx \
-  /usr/include/pqxx/transaction_focus.hxx \
-  /usr/include/pqxx/connection \
-  /usr/include/pqxx/cursor \
-  /usr/include/pqxx/cursor.hxx \
-  /usr/include/pqxx/internal/sql_cursor.hxx \
-  /usr/include/pqxx/errorhandler \
-  /usr/include/pqxx/except \
-  /usr/include/pqxx/largeobject \
-  /usr/include/pqxx/largeobject.hxx \
-  /usr/include/pqxx/nontransaction \
-  /usr/include/pqxx/nontransaction.hxx \
-  /usr/include/pqxx/transaction.hxx \
-  /usr/include/pqxx/notification \
-  /usr/include/pqxx/notification.hxx \
-  /usr/include/pqxx/params \
-  /usr/include/pqxx/pipeline \
-  /usr/include/pqxx/pipeline.hxx \
-  /usr/include/pqxx/prepared_statement \
-  /usr/include/pqxx/params.hxx \
-  /usr/include/pqxx/result \
-  /usr/include/pqxx/internal/result_iterator.hxx \
-  /usr/include/pqxx/internal/result_iter.hxx \
-  /usr/include/pqxx/robusttransaction \
-  /usr/include/pqxx/robusttransaction.hxx \
-  /usr/include/pqxx/stream_from \
-  /usr/include/pqxx/stream_to \
-  /usr/include/pqxx/stream_to.hxx \
-  /usr/include/pqxx/subtransaction \
-  /usr/include/pqxx/subtransaction.hxx \
-  /usr/include/pqxx/transaction \
-  /usr/include/pqxx/transactor \
-  /usr/include/pqxx/transactor.hxx
+  /usr/include/c++/12/tr1/riemann_zeta.tcc
 
 CMakeFiles/KlapperNetwork.dir/persistence.cpp.o: /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/persistence.cpp \
   /usr/include/stdc-predef.h \
@@ -2020,11 +2020,153 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/traininghandler.h:
 
+/usr/include/c++/12/bits/uses_allocator_args.h:
+
+/usr/include/c++/12/bits/unordered_set.h:
+
+/usr/include/c++/12/typeindex:
+
+/usr/include/c++/12/bits/this_thread_sleep.h:
+
+/usr/include/c++/12/scoped_allocator:
+
+/usr/include/c++/12/bits/regex.h:
+
+/usr/include/c++/12/bits/regex_compiler.tcc:
+
+/usr/include/c++/12/bits/regex_scanner.tcc:
+
+/usr/include/c++/12/bits/regex_automaton.tcc:
+
+/usr/include/c++/12/bits/regex_automaton.h:
+
+/usr/include/c++/12/bits/regex_constants.h:
+
+/usr/include/c++/12/bits/random.h:
+
+/usr/include/c++/12/random:
+
+/usr/include/c++/12/bits/regex_error.h:
+
+/usr/include/c++/12/bits/atomic_futex.h:
+
+/usr/include/c++/12/chrono:
+
+/usr/include/c++/12/bits/indirect_array.h:
+
+/usr/include/c++/12/bits/mask_array.h:
+
+/usr/include/c++/12/bits/valarray_array.tcc:
+
+/usr/include/c++/12/valarray:
+
+/usr/include/c++/12/bits/stl_stack.h:
+
+/usr/include/c++/12/stack:
+
+/usr/include/c++/12/queue:
+
+/usr/include/c++/12/bits/regex_executor.tcc:
+
+/usr/include/c++/12/bits/deque.tcc:
+
+/usr/include/c++/12/bits/stl_deque.h:
+
+/usr/include/c++/12/bitset:
+
+/usr/include/c++/12/cuchar:
+
+/usr/include/c++/12/ctgmath:
+
+/usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h:
+
+/usr/include/c++/12/cstdbool:
+
+/usr/lib/gcc/x86_64-redhat-linux/12/include/stdalign.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/c++/12/cinttypes:
+
+/usr/include/c++/12/complex:
+
+/usr/include/bits/sigthread.h:
+
+/usr/include/bits/types/struct_sigstack.h:
+
+/usr/include/c++/12/ccomplex:
+
+/usr/include/bits/unistd_ext.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/sigstksz.h:
+
+/usr/include/bits/sigstack.h:
+
+/usr/include/bits/types/stack_t.h:
+
+/usr/include/bits/types/sigval_t.h:
+
+/usr/include/bits/siginfo-consts.h:
+
+/usr/include/bits/siginfo-arch.h:
+
+/usr/include/bits/types/siginfo_t.h:
+
+/usr/include/c++/12/bits/valarray_after.h:
+
+/usr/include/bits/signum-arch.h:
+
+/usr/include/bits/signum-generic.h:
+
+/usr/include/c++/12/csignal:
+
+/usr/include/c++/12/atomic:
+
+/usr/include/setjmp.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/12/include/limits.h:
+
+/usr/include/c++/12/climits:
+
+/usr/lib/gcc/x86_64-redhat-linux/12/include/float.h:
+
+/usr/include/c++/12/cfloat:
+
+/usr/include/c++/12/bits/regex_executor.h:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/stdc++.h:
+
+/usr/include/c++/12/bits/fstream.tcc:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h:
+
 /usr/include/pqxx/subtransaction.hxx:
 
 /usr/include/pqxx/stream_to.hxx:
 
+/usr/include/bits/getopt_core.h:
+
+/usr/include/pqxx/stream_to:
+
 /usr/include/pqxx/stream_from:
+
+/usr/include/bits/ss_flags.h:
+
+/usr/include/pqxx/robusttransaction.hxx:
+
+/usr/include/bits/sigevent-consts.h:
+
+/usr/include/pqxx/robusttransaction:
 
 /usr/include/pqxx/transactor.hxx:
 
@@ -2060,7 +2202,21 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/pqxx/stream_from.hxx:
 
+/usr/lib/gcc/x86_64-redhat-linux/12/include/syslimits.h:
+
+/usr/include/assert.h:
+
+/usr/include/c++/12/cassert:
+
 /usr/include/pqxx/internal/array-composite.hxx:
+
+/usr/include/bits/sigcontext.h:
+
+/usr/include/pqxx/composite.hxx:
+
+/usr/include/c++/12/mutex:
+
+/usr/include/pqxx/field.hxx:
 
 /usr/include/pqxx/row.hxx:
 
@@ -2072,107 +2228,35 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/pqxx/transaction_base.hxx:
 
+/usr/include/c++/12/bits/fs_dir.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/c++/12/codecvt:
+
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/12/locale:
+
+/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/networkhandler.cpp:
+
+/usr/include/c++/12/ratio:
+
+/usr/include/c++/12/bits/fs_fwd.h:
+
+/usr/include/c++/12/list:
+
+/usr/include/c++/12/filesystem:
+
 /usr/include/pqxx/internal/ignore-deprecated-post.hxx:
 
 /usr/include/pqxx/dbtransaction.hxx:
 
 /usr/include/pqxx/internal/ignore-deprecated-pre.hxx:
 
-/usr/include/pqxx/internal/concat.hxx:
-
-/usr/include/pqxx/internal/conversions.hxx:
-
-/usr/include/pqxx/strconv.hxx:
-
-/usr/include/pqxx/zview.hxx:
-
-/usr/include/pqxx/version.hxx:
-
-/usr/include/c++/12/version:
-
-/usr/include/pqxx/util.hxx:
-
-/usr/include/pqxx/types.hxx:
-
-/usr/include/pqxx/except.hxx:
-
-/usr/include/pqxx/binarystring.hxx:
-
-/usr/include/pqxx/internal/compiler-internal-post.hxx:
-
-/usr/include/pqxx/array.hxx:
-
-/usr/include/pqxx/pipeline:
-
-/usr/include/pqxx/pqxx:
-
-/usr/include/c++/12/variant:
-
-/usr/include/c++/12/bits/uses_allocator_args.h:
-
-/usr/include/c++/12/bits/fs_dir.h:
-
-/usr/include/c++/12/bits/fs_fwd.h:
-
-/usr/include/c++/12/bits/unordered_set.h:
-
-/usr/include/c++/12/typeindex:
-
-/usr/include/c++/12/bits/this_thread_sleep.h:
-
-/usr/include/c++/12/scoped_allocator:
-
-/usr/include/c++/12/bits/regex.h:
-
-/usr/include/c++/12/bits/regex_compiler.tcc:
-
-/usr/include/c++/12/bits/regex_scanner.tcc:
-
-/usr/include/c++/12/bits/regex_automaton.tcc:
-
-/usr/include/c++/12/bits/regex_automaton.h:
-
-/usr/include/c++/12/bits/regex_constants.h:
-
-/usr/include/c++/12/bits/random.h:
-
-/usr/include/c++/12/random:
-
-/usr/include/c++/12/bits/regex_error.h:
-
-/usr/include/c++/12/bits/atomic_futex.h:
-
-/usr/include/pqxx/field.hxx:
-
-/usr/include/c++/12/mutex:
-
 /usr/include/c++/12/bits/parse_numbers.h:
 
-/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/networkhandler.cpp:
-
-/usr/include/c++/12/ratio:
-
-/usr/include/c++/12/chrono:
-
-/usr/include/c++/12/bits/indirect_array.h:
-
-/usr/include/c++/12/bits/mask_array.h:
-
-/usr/include/c++/12/bits/valarray_array.tcc:
-
-/usr/include/c++/12/valarray:
-
-/usr/include/c++/12/bits/stl_relops.h:
-
-/usr/include/c++/12/bits/stl_stack.h:
-
-/usr/include/c++/12/stack:
-
-/usr/include/pqxx/binarystring:
-
-/usr/include/c++/12/bits/stl_multiset.h:
-
-/usr/include/c++/12/queue:
+/usr/include/c++/12/variant:
 
 /usr/include/c++/12/pstl/glue_numeric_defs.h:
 
@@ -2182,95 +2266,31 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/numeric:
 
-/usr/include/c++/12/pstl/glue_memory_defs.h:
-
-/usr/include/c++/12/backward/auto_ptr.h:
-
-/usr/include/c++/12/bits/gslice_array.h:
-
-/usr/include/c++/12/bits/atomic_lockfree_defines.h:
-
-/usr/include/c++/12/bits/atomic_base.h:
-
-/usr/include/c++/12/bits/shared_ptr_base.h:
-
-/usr/include/c++/12/bits/shared_ptr.h:
-
-/usr/include/c++/12/bit:
-
-/usr/include/c++/12/unordered_set:
-
-/usr/include/c++/12/bits/align.h:
-
-/usr/include/c++/12/bits/stl_raw_storage_iter.h:
-
-/usr/include/pqxx/array:
-
-/usr/include/c++/12/memory:
-
 /usr/include/c++/12/condition_variable:
 
 /usr/include/c++/12/bits/stl_multimap.h:
 
 /usr/include/c++/12/bits/stl_map.h:
 
-/usr/include/pqxx/internal/libpq-forward.hxx:
+/usr/include/pqxx/internal/concat.hxx:
+
+/usr/include/pqxx/internal/conversions.hxx:
+
+/usr/include/c++/12/bits/random.tcc:
+
+/usr/include/c++/12/algorithm:
+
+/usr/include/pqxx/strconv.hxx:
+
+/usr/include/pqxx/zview.hxx:
 
 /usr/include/c++/12/bits/list.tcc:
 
-/usr/include/c++/12/filesystem:
+/usr/include/pqxx/internal/libpq-forward.hxx:
 
-/usr/include/c++/12/list:
+/usr/include/pqxx/version.hxx:
 
-/usr/include/c++/12/bits/unique_ptr.h:
-
-/usr/include/c++/12/iterator:
-
-/usr/include/pqxx/result.hxx:
-
-/usr/include/c++/12/bits/quoted_string.h:
-
-/usr/include/c++/12/bits/locale_facets_nonio.tcc:
-
-/usr/include/pqxx/nontransaction.hxx:
-
-/usr/include/pqxx/internal/encoding_group.hxx:
-
-/usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h:
-
-/usr/include/c++/12/locale:
-
-/usr/include/c++/12/compare:
-
-/usr/include/c++/12/array:
-
-/usr/include/c++/12/bits/valarray_array.h:
-
-/usr/include/c++/12/bits/erase_if.h:
-
-/usr/include/c++/12/bits/hashtable_policy.h:
-
-/usr/include/c++/12/bits/hashtable.h:
-
-/usr/include/c++/12/unordered_map:
-
-/usr/include/c++/12/bits/std_function.h:
-
-/usr/include/c++/12/bits/uses_allocator.h:
-
-/usr/include/c++/12/functional:
-
-/usr/include/c++/12/bits/regex_executor.tcc:
-
-/usr/include/c++/12/bits/deque.tcc:
-
-/usr/include/c++/12/bits/stl_deque.h:
-
-/usr/include/c++/12/bitset:
-
-/usr/include/c++/12/pstl/execution_defs.h:
-
-/usr/include/c++/12/bits/stl_tempbuf.h:
+/usr/include/c++/12/version:
 
 /usr/include/c++/12/bits/fs_ops.h:
 
@@ -2280,63 +2300,31 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/bits/stl_algo.h:
 
-/usr/include/c++/12/bits/random.tcc:
+/usr/include/c++/12/compare:
 
-/usr/include/c++/12/algorithm:
+/usr/include/c++/12/array:
 
-/usr/include/c++/12/cuchar:
+/usr/include/c++/12/bits/valarray_array.h:
 
-/usr/include/c++/12/ctgmath:
-
-/usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h:
-
-/usr/include/c++/12/cstdbool:
-
-/usr/lib/gcc/x86_64-redhat-linux/12/include/stdalign.h:
-
-/usr/include/inttypes.h:
-
-/usr/include/c++/12/cinttypes:
-
-/usr/include/c++/12/bits/enable_special_members.h:
+/usr/include/c++/12/bits/erase_if.h:
 
 /usr/include/bits/fenv.h:
 
-/usr/include/c++/12/complex:
+/usr/include/c++/12/bits/enable_special_members.h:
 
-/usr/include/bits/sigthread.h:
+/usr/include/c++/12/bits/hashtable_policy.h:
 
-/usr/include/bits/types/struct_sigstack.h:
+/usr/include/c++/12/bits/hashtable.h:
 
-/usr/include/pqxx/robusttransaction.hxx:
+/usr/include/c++/12/unordered_map:
 
-/usr/include/bits/ss_flags.h:
+/usr/include/c++/12/bits/std_function.h:
 
-/usr/include/c++/12/codecvt:
+/usr/include/c++/12/functional:
 
-/usr/include/linux/close_range.h:
+/usr/include/pqxx/util.hxx:
 
-/usr/include/c++/12/ccomplex:
-
-/usr/include/bits/unistd_ext.h:
-
-/usr/include/pqxx/stream_to:
-
-/usr/include/bits/getopt_core.h:
-
-/usr/include/bits/confname.h:
-
-/usr/include/unistd.h:
-
-/usr/include/bits/sigstksz.h:
-
-/usr/include/bits/sigstack.h:
-
-/usr/include/bits/types/stack_t.h:
-
-/usr/include/pqxx/composite.hxx:
-
-/usr/include/bits/sigcontext.h:
+/usr/include/pqxx/types.hxx:
 
 /usr/include/c++/12/bits/stl_set.h:
 
@@ -2344,23 +2332,17 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/bits/refwrap.h:
 
-/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/persistence.h:
-
-/usr/include/c++/12/cstddef:
-
-/usr/include/c++/12/cerrno:
-
 /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/traininghandler.cpp:
 
 /usr/include/c++/12/ext/numeric_traits.h:
 
-/usr/include/pqxx/internal/compiler-public.hxx:
-
-/usr/include/c++/12/charconv:
-
-/usr/include/c++/12/pstl/pstl_config.h:
-
 /usr/include/math.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/c++/12/iomanip:
+
+/usr/include/c++/12/debug/debug.h:
 
 /usr/include/c++/12/bits/ostream_insert.h:
 
@@ -2388,6 +2370,10 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/cstdlib:
 
+/usr/include/pqxx/pipeline:
+
+/usr/include/pqxx/pqxx:
+
 /usr/include/bits/types/timer_t.h:
 
 /usr/include/bits/atomic_wide_counter.h:
@@ -2410,9 +2396,9 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/bits/range_access.h:
 
-/usr/include/c++/12/bits/uniform_int_dist.h:
-
 /usr/include/bits/posix_opt.h:
+
+/usr/include/c++/12/bits/uniform_int_dist.h:
 
 /usr/include/c++/12/bits/ptr_traits.h:
 
@@ -2428,6 +2414,14 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/bits/types/time_t.h:
 
+/usr/include/c++/12/cstdarg:
+
+/usr/include/bits/types/__sigval_t.h:
+
+/usr/include/c++/12/bits/concept_check.h:
+
+/usr/include/gnu/stubs-64.h:
+
 /usr/include/libintl.h:
 
 /usr/include/c++/12/bits/sstream.tcc:
@@ -2436,9 +2430,9 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/cmath:
 
-/usr/include/pqxx/config-public-compiler.h:
-
 /usr/include/fenv.h:
+
+/usr/include/pqxx/config-public-compiler.h:
 
 /usr/include/c++/12/bits/stl_algobase.h:
 
@@ -2450,21 +2444,19 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/ctype.h:
 
-/usr/include/pqxx/internal/result_iter.hxx:
-
 /usr/include/c++/12/fenv.h:
+
+/usr/include/pqxx/internal/result_iter.hxx:
 
 /usr/include/bits/waitflags.h:
 
 /usr/include/c++/12/cctype:
 
-/usr/include/c++/12/ext/aligned_buffer.h:
-
-/usr/include/features-time64.h:
-
 /usr/include/c++/12/stdexcept:
 
 /usr/include/c++/12/istream:
+
+/usr/include/c++/12/bits/atomic_base.h:
 
 /usr/include/bits/locale.h:
 
@@ -2484,8 +2476,6 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/vector:
 
-/usr/include/bits/types/siginfo_t.h:
-
 /usr/include/pqxx/subtransaction:
 
 /usr/include/c++/12/bits/node_handle.h:
@@ -2493,6 +2483,12 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 /usr/include/c++/12/ext/atomicity.h:
 
 /usr/include/c++/12/string:
+
+/usr/include/c++/12/bits/forward_list.tcc:
+
+/usr/include/signal.h:
+
+/usr/include/strings.h:
 
 /usr/include/c++/12/x86_64-redhat-linux/bits/gthr.h:
 
@@ -2510,7 +2506,11 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/bits/mathcalls.h:
 
+/usr/include/c++/12/bits/shared_ptr_base.h:
+
 /usr/include/c++/12/iostream:
+
+/usr/include/c++/12/backward/auto_ptr.h:
 
 /usr/include/bits/types/locale_t.h:
 
@@ -2532,10 +2532,6 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/bits/types/struct_timespec.h:
 
-/usr/include/c++/12/ext/concurrence.h:
-
-/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/backpropagation.cpp:
-
 /usr/include/bits/types/FILE.h:
 
 /usr/include/c++/12/bits/forward_list.h:
@@ -2546,21 +2542,17 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/gnu/stubs.h:
 
+/usr/include/c++/12/unordered_set:
+
+/usr/include/c++/12/bits/align.h:
+
 /usr/include/c++/12/deque:
 
 /usr/include/c++/12/ext/type_traits.h:
 
-/usr/include/c++/12/iomanip:
-
-/usr/include/c++/12/debug/debug.h:
-
-/usr/include/bits/posix2_lim.h:
-
-/usr/include/pqxx/robusttransaction:
-
-/usr/include/bits/sigevent-consts.h:
-
 /usr/include/sys/cdefs.h:
+
+/usr/include/c++/12/bits/uses_allocator.h:
 
 /usr/include/c++/12/bits/valarray_before.h:
 
@@ -2584,11 +2576,19 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/pthread.h:
 
+/usr/include/bits/types/sig_atomic_t.h:
+
+/usr/include/bits/types/__fpos_t.h:
+
+/usr/include/c++/12/cstdint:
+
+/usr/include/c++/12/bits/stl_relops.h:
+
 /usr/include/bits/libc-header-start.h:
 
-/usr/include/c++/12/bits/shared_ptr_atomic.h:
+/usr/include/bits/xopen_lim.h:
 
-/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/backpropagation.h:
+/usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h:
 
 /usr/include/c++/12/set:
 
@@ -2600,6 +2600,12 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/bits/new_allocator.h:
 
+/usr/include/c++/12/cerrno:
+
+/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/persistence.h:
+
+/usr/include/c++/12/cstddef:
+
 /usr/include/c++/12/optional:
 
 /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/node.h:
@@ -2610,13 +2616,21 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/bits/types/struct_sched_param.h:
 
-/usr/include/c++/12/bits/fstream.tcc:
-
 /usr/include/c++/12/bits/stl_queue.h:
 
 /usr/include/bits/floatn.h:
 
+/usr/include/bits/siginfo-consts-arch.h:
+
+/usr/include/pqxx/connection.hxx:
+
+/usr/include/c++/12/debug/assertions.h:
+
 /usr/include/c++/12/bits/std_abs.h:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/error_constants.h:
 
 /usr/include/c++/12/exception:
 
@@ -2628,27 +2642,25 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/new:
 
+/usr/include/pqxx/nontransaction.hxx:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h:
+
+/usr/include/pqxx/internal/encoding_group.hxx:
+
 /usr/include/bits/cpu-set.h:
 
 /usr/include/c++/12/math.h:
 
 /usr/include/c++/12/typeinfo:
 
+/usr/include/c++/12/charconv:
+
+/usr/include/c++/12/pstl/pstl_config.h:
+
+/usr/include/pqxx/internal/compiler-public.hxx:
+
 /usr/include/bits/typesizes.h:
-
-/usr/include/c++/12/bits/regex_executor.h:
-
-/usr/include/c++/12/x86_64-redhat-linux/bits/stdc++.h:
-
-/usr/include/bits/types/__fpos_t.h:
-
-/usr/include/c++/12/cstdint:
-
-/usr/include/bits/types/sig_atomic_t.h:
-
-/usr/include/pqxx/internal/compiler-internal-pre.hxx:
-
-/usr/include/c++/12/ostream:
 
 /usr/include/bits/types/clockid_t.h:
 
@@ -2659,6 +2671,20 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 /usr/include/c++/12/future:
 
 /usr/include/bits/long-double.h:
+
+/usr/include/c++/12/bits/unique_lock.h:
+
+/usr/include/bits/types/sigevent_t.h:
+
+/usr/include/c++/12/bits/memoryfwd.h:
+
+/usr/include/c++/12/bits/stl_pair.h:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/cpu_defines.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/wchar.h:
 
 /usr/include/bits/floatn-common.h:
 
@@ -2712,10 +2738,6 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/bits/exception_ptr.h:
 
-/usr/include/wchar.h:
-
-/usr/include/bits/posix1_lim.h:
-
 /usr/include/c++/12/x86_64-redhat-linux/bits/os_defines.h:
 
 /usr/include/c++/12/bits/locale_classes.h:
@@ -2729,10 +2751,6 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 /usr/include/c++/12/bits/nested_exception.h:
 
 /usr/include/c++/12/bits/char_traits.h:
-
-/usr/include/c++/12/cfloat:
-
-/usr/include/linux/limits.h:
 
 /usr/include/c++/12/bits/unordered_map.h:
 
@@ -2758,17 +2776,29 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/bits/time64.h:
 
+/usr/include/c++/12/bits/slice_array.h:
+
 /usr/include/pqxx/isolation.hxx:
 
 /usr/include/pqxx/blob:
-
-/usr/include/c++/12/bits/slice_array.h:
 
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/c++/12/initializer_list:
 
+/usr/include/c++/12/bits/shared_ptr.h:
+
 /usr/include/c++/12/ext/alloc_traits.h:
+
+/usr/include/c++/12/bits/stl_multiset.h:
+
+/usr/include/pqxx/binarystring:
+
+/usr/include/limits.h:
+
+/usr/include/pqxx/pipeline.hxx:
+
+/usr/include/c++/12/bits/alloc_traits.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/12/include/stddef.h:
 
@@ -2776,9 +2806,7 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/bits/iscanonical.h:
 
-/usr/include/c++/12/tuple:
-
-/usr/include/c++/12/bits/functional_hash.h:
+/usr/include/c++/12/pstl/glue_memory_defs.h:
 
 /usr/include/bits/wordsize.h:
 
@@ -2787,12 +2815,6 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 /usr/include/c++/12/bits/vector.tcc:
 
 /usr/include/c++/12/ext/string_conversions.h:
-
-/usr/include/pqxx/pipeline.hxx:
-
-/usr/include/c++/12/bits/alloc_traits.h:
-
-/usr/include/limits.h:
 
 /usr/include/sys/types.h:
 
@@ -2808,6 +2830,10 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/endian.h:
 
+/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/backpropagation.cpp:
+
+/usr/include/c++/12/ext/concurrence.h:
+
 /usr/include/c++/12/bits/stl_list.h:
 
 /usr/include/bits/byteswap.h:
@@ -2816,7 +2842,13 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/sys/select.h:
 
-/usr/include/c++/12/csignal:
+/usr/include/c++/12/thread:
+
+/usr/include/c++/12/bits/codecvt.h:
+
+/usr/include/c++/12/bits/cpp_type_traits.h:
+
+/usr/include/bits/select.h:
 
 /usr/include/bits/types/sigset_t.h:
 
@@ -2830,9 +2862,9 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/cstdio:
 
-/usr/include/pqxx/separated_list.hxx:
-
 /usr/include/bits/environments.h:
+
+/usr/include/pqxx/separated_list.hxx:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -2858,17 +2890,29 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/streambuf:
 
+/usr/include/pqxx/internal/compiler-internal-post.hxx:
+
 /usr/include/c++/12/bits/streambuf.tcc:
 
 /usr/include/c++/12/sstream:
 
 /usr/include/c++/12/bits/basic_ios.h:
 
+/usr/include/c++/12/pstl/execution_defs.h:
+
 /usr/include/c++/12/string_view:
 
 /usr/include/c++/12/bits/locale_facets.h:
 
 /usr/include/c++/12/bits/ostream.tcc:
+
+/usr/include/c++/12/bits/functional_hash.h:
+
+/usr/include/c++/12/tuple:
+
+/usr/include/c++/12/iterator:
+
+/usr/include/c++/12/bits/unique_ptr.h:
 
 /usr/include/c++/12/bits/locale_facets.tcc:
 
@@ -2878,29 +2922,27 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /usr/include/c++/12/bits/basic_ios.tcc:
 
-/usr/include/c++/12/cstdarg:
-
-/usr/include/c++/12/bits/concept_check.h:
-
-/usr/include/gnu/stubs-64.h:
-
-/usr/include/bits/types/__sigval_t.h:
-
 /usr/include/c++/12/bits/stl_vector.h:
+
+/usr/include/c++/12/bits/quoted_string.h:
+
+/usr/include/pqxx/result.hxx:
 
 /usr/include/c++/12/x86_64-redhat-linux/bits/opt_random.h:
 
 /usr/include/c++/12/bits/stl_bvector.h:
 
-/usr/include/c++/12/x86_64-redhat-linux/bits/error_constants.h:
+/usr/include/c++/12/any:
 
-/usr/include/bits/sigaction.h:
+/usr/include/bits/uio_lim.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/12/include/float.h:
+/usr/include/c++/12/ctime:
 
-/usr/include/c++/12/bits/valarray_after.h:
+/usr/include/bits/math-vector.h:
 
-/usr/include/bits/signum-arch.h:
+/usr/include/features-time64.h:
+
+/usr/include/c++/12/ext/aligned_buffer.h:
 
 /usr/include/bits/libm-simd-decl-stubs.h:
 
@@ -2948,78 +2990,36 @@ CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o: /home/tired_atlas/Desktop/K
 
 /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/main.cpp:
 
-/usr/include/bits/local_lim.h:
+/usr/include/c++/12/fstream:
 
 /home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/networkhandler.h:
 
-/usr/include/c++/12/fstream:
+/usr/include/c++/12/memory:
 
-/usr/include/c++/12/thread:
+/usr/include/pqxx/array:
 
-/usr/include/c++/12/bits/cpp_type_traits.h:
+/usr/include/c++/12/ostream:
 
-/usr/include/bits/select.h:
-
-/usr/include/c++/12/bits/codecvt.h:
-
-/usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h:
-
-/usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h:
-
-/usr/include/c++/12/climits:
-
-/usr/include/c++/12/cassert:
+/usr/include/pqxx/internal/compiler-internal-pre.hxx:
 
 /usr/include/c++/12/ciso646:
 
-/usr/lib/gcc/x86_64-redhat-linux/12/include/limits.h:
+/usr/include/pqxx/array.hxx:
 
-/usr/include/assert.h:
+/usr/include/pqxx/binarystring.hxx:
 
-/usr/lib/gcc/x86_64-redhat-linux/12/include/syslimits.h:
+/usr/include/c++/12/bits/stl_tempbuf.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h:
+/usr/include/c++/12/bits/stl_raw_storage_iter.h:
 
-/usr/include/bits/xopen_lim.h:
+/usr/include/c++/12/bit:
 
-/usr/include/c++/12/any:
+/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/backpropagation.h:
 
-/usr/include/c++/12/ctime:
+/usr/include/c++/12/bits/shared_ptr_atomic.h:
 
-/usr/include/bits/math-vector.h:
+/usr/include/c++/12/bits/gslice_array.h:
 
-/usr/include/bits/uio_lim.h:
+/usr/include/c++/12/bits/atomic_lockfree_defines.h:
 
-/usr/include/c++/12/atomic:
-
-/usr/include/setjmp.h:
-
-/usr/include/c++/12/bits/forward_list.tcc:
-
-/usr/include/strings.h:
-
-/usr/include/signal.h:
-
-/usr/include/bits/signum-generic.h:
-
-/usr/include/bits/siginfo-arch.h:
-
-/usr/include/bits/siginfo-consts.h:
-
-/usr/include/pqxx/connection.hxx:
-
-/usr/include/c++/12/debug/assertions.h:
-
-/usr/include/bits/siginfo-consts-arch.h:
-
-/usr/include/bits/types/sigval_t.h:
-
-/usr/include/c++/12/bits/unique_lock.h:
-
-/usr/include/c++/12/bits/memoryfwd.h:
-
-/usr/include/c++/12/bits/stl_pair.h:
-
-/usr/include/c++/12/x86_64-redhat-linux/bits/cpu_defines.h:
-
-/usr/include/bits/types/sigevent_t.h:
+/usr/include/pqxx/except.hxx:

@@ -4,7 +4,7 @@
 #include "node.h"
 #include <vector>
 #include "backpropagation.h"
-
+#include "persistence.h"
 class NetworkHandler
 {
 public:
@@ -37,6 +37,9 @@ private:
 
 
     int batchAmount = 0;
+
+
+
 };
 
 #endif // NETWORKHANDLER_H

@@ -1,7 +1,7 @@
 #include "node.h"
 #include <math.h>
 #include <iostream>
-#include "persistence.h"
+
 // Constructors
 Node::Node()
 {
@@ -72,9 +72,9 @@ void Node::CommitAVGWeightChange(int samples){
 
 }
 
-void Node::loadWeight(){
-    Persistence p;
-    std::vector<long> newWeight = p.loadNode(this->getId());
+void Node::loadWeight(std::vector<long> newWeight){
+
+
 
     for(int i = 0; i<newWeight.size();i++){
 

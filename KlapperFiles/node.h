@@ -3,7 +3,7 @@
 
 #include <string.h>
 #include <iostream>
-//#include "persistence.h"
+#include <vector>
 
 class Node
 {
@@ -19,7 +19,7 @@ public:
     void setRandomWeight(int numberSpan, int index);
     void AddNewWeightChange(double input_weight, int index);
     void resetWeightchange();
-    void loadWeight();
+    void loadWeight(std::vector<long>);
 
 
 private:

@@ -1,4 +1,5 @@
 #include "networkhandler.h"
+
 #include <math.h>
 
 NetworkHandler::NetworkHandler()
@@ -19,19 +20,17 @@ NetworkHandler::NetworkHandler(int inputNodeCount,int numberOfLayers,int numberO
 void NetworkHandler::generateNodes(){
 
     std::vector<Node> temp;
-
+    Persistence p;
      // Loop to generate the inputLayer
-    int LoadingCount =0;
+
         std::cout << "Generating Input Layer" << std::endl;
     for(int i = 0; i<inputNodeCount;i++){
     Node* n = new Node(0,i);
-    n->loadWeight();
+    std::vector<long> w = p.loadNode(n->getId());
+
+    n->loadWeight(w);
     temp.push_back(*n);
 
-    if(i%5 == 0){
-        std::cout << "Loading: " << LoadingCount << "%"<< std::endl;
-        LoadingCount+=1;
-    }
     }
    nodes.push_back(temp);
 
@@ -48,7 +47,8 @@ void NetworkHandler::generateNodes(){
        temp.clear();
        for(int j = 0; j<tempNumOfNodes;j++){
            Node* n = new Node(i,j);
-            n->loadWeight();
+           std::vector<long> w = p.loadNode(n->getId());
+            n->loadWeight(w);
             temp.push_back(*n);
 }
             nodes.push_back(temp);
@@ -122,6 +122,7 @@ void NetworkHandler::generateRandomWeightNodes(){
 void NetworkHandler::bias_weight_change_Clear(){
 
     int array_size        = sizeof(bias_weight_change)/sizeof(bias_weight_change[0]);
+    Persistence persistence;
     int double_array_size = sizeof(bias_weight_change[0])/sizeof(bias_weight_change[0][0]);
 
     for(int i = 0; i < array_size; i++){
