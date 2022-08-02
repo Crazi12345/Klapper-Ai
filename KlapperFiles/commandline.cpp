@@ -13,7 +13,8 @@ void CommandLine::Menu(){
   cout << "Options:\n\t"<<
        "1:Train\n\t"<<
           "2:TestTrain\n\t" <<
-            "3:PrintNetwork\n\t" << endl;
+            "3:PrintNetwork\n\t"
+                "4:Override Network\n\t" << endl;
   cout << endl;
   cout << ">> ";
   string command;
@@ -48,6 +49,23 @@ void CommandLine::CommandHandler(string c){
           nh.PrettyPrint();
 
 
+    }
+    else if(c == "override" || c == "NEW"|| c == "4"|| c == "OVERRIDE"|| c=="Override"){
+        string s;
+        cout << "WARNING!!! WARNING!!! WARNING!!!\n "
+                "This will override all progress made and make all the weights random and save it to the database\n"
+                "Are You COMPLETELY SURE, you will do this then type \'OVERRIDE\' else this will abort" << endl;
+        cin >> s;
+        if(s=="OVERRIDE"){
+            NetworkHandler nh(500,5,10);
+            srand((unsigned) time(0));
+            nh.generateRandomWeightNodes();
+            TrainingHandler trainer(nh);
+            trainer.GenerateInputNodes();
+            trainer.Train();
+            Persistence p;
+            p.saveNodes(nh.getNodes());
+        }
     }
     else if(c == "help"|| c =="Help"){
         Help();
