@@ -102,8 +102,11 @@ void backpropagation::backpropagate(float clapSound)
                 for(int bias_weight_index = 0; bias_weight_index < weight_count; bias_weight_index++){
                     //Calculcate bias weight
                     //The bias output is 1. -> nonexistent
-                    _bias_weight[i*10 + bias_weight_index] += (_stepsize * last_layer_sigma[bias_weight_index] *
-                                                              _bias_weight[i*10 + bias_weight_index] );
+                    _bias_weight[i] += (_stepsize * last_layer_sigma[bias_weight_index] *
+                                                              _bias_weight[i] );
+                    
+                    //Get average of all wanted changes from all nodes.
+                    _bias_weight[i] /= weight_count;
                 }
             }
 

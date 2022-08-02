@@ -36,10 +36,10 @@ void NetworkHandler::generateNodes(){
    nodes.push_back(temp);
 
       //Generate input bias node
-   for(int i = 0; i < 10; i++){
-       float random_weight = (rand()%100 - 50);
-       bias_weight[0][i] = random_weight;
-   }
+
+    float random_weight = (rand()%100 - 50);
+    bias_weight[0] = random_weight;
+
 
    // Loop to generate the Hidden Layers
     std::cout << "Generating Hidden Layer" << std::endl;
@@ -64,6 +64,7 @@ void NetworkHandler::generateNodes(){
 void NetworkHandler::generateRandomWeightNodes(){
     nodes.clear();
     bias_weight_change_Clear();
+    srand(time(0));
 
     std::vector<Node> temp;
     for(int i = 0; i<inputNodeCount;i++){ 
@@ -80,30 +81,32 @@ void NetworkHandler::generateRandomWeightNodes(){
 
     nodes.push_back(temp);
 
-    for(int i = 0; i < 10; i++){
-        //Generate input bias node
-        float random_weight = (rand()%100 - 50);
-        bias_weight[0][i] = random_weight;
-    }
+    //Generate input bias node
+    float random_weight = (rand()%100 - 50);
+    bias_weight[0] = random_weight;
+
 
 
     // Loop to generate the Hidden Layers
     int tempNumOfNodes = numberOfNodes;
     for(int i = 1; i<numberOfLayers;i++){
         temp.clear();
+        
+        //generate bias node per hidden layer
+
+        float random_weight = (rand()%50 - 25);
+        bias_weight[i] = random_weight;
+
         for(int j = 0; j<tempNumOfNodes;j++){
             Node* n = new Node(i,j);
             for(int weight_index = 0; weight_index < 10; weight_index++){
                 n->setRandomWeight(100, weight_index);
             }
 
-            //Generate bias hidden nodes
-            float random_weight = (rand()%50 - 25);
-            bias_weight[i][j] = random_weight;
-
-
             temp.push_back(*n);
         }
+
+
         nodes.push_back(temp);
         //tempNumOfNodes += 2;
 
@@ -122,12 +125,11 @@ void NetworkHandler::generateRandomWeightNodes(){
 void NetworkHandler::bias_weight_change_Clear(){
 
     int array_size        = sizeof(bias_weight_change)/sizeof(bias_weight_change[0]);
-    int double_array_size = sizeof(bias_weight_change[0])/sizeof(bias_weight_change[0][0]);
 
     for(int i = 0; i < array_size; i++){
-        for(int j = 0; j < double_array_size; j++){
-            bias_weight_change[i][j] = 0;
-        }
+
+        bias_weight_change[i] = 0;
+
     }
 }
 
@@ -160,7 +162,7 @@ void NetworkHandler::PrettyPrint(){
 void NetworkHandler::BackProp(float nn_output, float clapSound)
 {
     batchAmount++;
-    backpropagation bp(&nodes, startlayer_outputs, &(hiddenlayer_outputs[0][0]), &nn_output, &(bias_weight_change[0][0]));
+    backpropagation bp(&nodes, startlayer_outputs, &(hiddenlayer_outputs[0][0]), &nn_output, &(bias_weight_change[0]));
     bp.backpropagate(clapSound);
 
 }
@@ -179,16 +181,15 @@ for(int i = 0; i < nodes.size(); i++){
 
 
 
-int array_size        = sizeof(bias_weight_change)/sizeof(bias_weight_change[0]);
-int double_array_size = sizeof(bias_weight_change[0])/sizeof(bias_weight_change[0][0]);
+int array_size = sizeof(bias_weight_change)/sizeof(bias_weight_change[0]);
 
 for(int i = 0; i < array_size; i++){
-    for(int j = 0; j < double_array_size; j++){
-        bias_weight_change[i][j] /= batchAmount;
-        bias_weight[i][j] += bias_weight_change[i][j];
 
-        bias_weight_change[i][j] = 0;
-    }
+        bias_weight_change[i] /= batchAmount;
+        bias_weight[i] += bias_weight_change[i];
+
+        bias_weight_change[i] = 0;
+    
 }
 
 batchAmount = 0;
@@ -247,7 +248,7 @@ float NetworkHandler::CalculateOutput(std::vector<int> &inputs)
 
             }
 
-            value += bias_weight[i-1][j];
+            value += bias_weight[i-1];
             addition_counter++;
 
             layervalues[j] = value/addition_counter;

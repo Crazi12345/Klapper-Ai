@@ -26,8 +26,8 @@ private:
     int numberOfLayers = 0;
     int numberOfNodes = 0;
 
-    float bias_weight[5][10];
-    float bias_weight_change[5][10];
+    float bias_weight[5];
+    float bias_weight_change[5];
 
     void bias_weight_change_Clear();
 
