@@ -5,6 +5,7 @@
 Persistence::Persistence()
 {
 this->loadNodeData();
+this->loadTrainingData();
 }
 
 
@@ -42,10 +43,7 @@ std::vector<long> Persistence::loadNode(std::string nodeId)
 
 }
   //  std::cout << iterationNum<< std::endl;
-    if(iterationNum%5==0){
-       double procent = (iterationNum/540)*100;
-       std::cout << "generating nodes at: "<< procent << "%" << std::endl;
-    }
+
 
 
     std::vector<long> found_messages;
@@ -188,7 +186,7 @@ void Persistence::loadTrainingData(){
     pqxx::result r = tah.exec_prepared("FindTrainingData");
     trainingData = r;
 }
-std::vector<int> Persistence::getData(){
+std::vector<int> Persistence::getDataRow(){
 
 
         std::vector<int> found_data;
@@ -206,14 +204,40 @@ std::vector<int> Persistence::getData(){
         std::cout << "No more data" << std::endl;
 
     }
-    moveTrainedData(pqxx::to_string(trainingData[0][0]));
-   return found_data;
+    moveTrainedData();
+    return found_data;
 
 
 }
 
-void Persistence::moveTrainedData(std::string id)
+void Persistence::moveTrainedData()
 {
+    pqxx::connection conn{getConnectionString()};
+    pqxx::work tah{conn};
+
+    conn.prepare("ChangeDataLocation","insert into trained_data(id,data,label) "
+                                      "select * from untrained_data fetch first 1 row only;");
+    conn.prepare("DeleteDataFromLocation",
+                 "DELETE from untrained_data where id in ( select id from trained_data fetch first 1 row only )");
+     tah.exec_prepared("ChangeDataLocation");
+     tah.exec_prepared("DeleteDataFromLocation");
+     tah.commit();
+
+    loadTrainingData();
+
+}
+
+void Persistence::moveTrainedDataBack()
+{
+    pqxx::connection conn{getConnectionString()};
+    pqxx::work tah{conn};
+    conn.prepare("MoveDataBack","insert into untrained_data(id,data,label) "
+                                       "select id,data,label from trained_data");
+    conn.prepare("DeleteDataLocation",
+                 "DELETE from trained_data where id in ( select id from trained_data)");
+    tah.exec_prepared("MoveDataBack");
+    tah.exec_prepared("DeleteDataLocation");
+    tah.commit();
 
 }
 

@@ -12,9 +12,10 @@ public:
     std::vector<long> loadNode(std::string nodeId);
     void saveNodes(std::vector<std::vector<Node>> nodes);
     void generateFreshNodes(std::vector<std::vector<Node>> nodes);
-    void moveTrainedData(std::string id);
+    void moveTrainedData();
+    void moveTrainedDataBack();
     void loadNodeData();
-    std::vector<int> getData();
+    std::vector<int> getDataRow();
     void loadTrainingData();
 
 

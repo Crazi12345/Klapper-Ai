@@ -16,3 +16,9 @@ Create table nodes(
     id varchar(64),
     weights decimal[]
 );
+
+create table bias(
+    id varchar(64) PRIMARY KEY,
+    weight decimal[]
+
+);
