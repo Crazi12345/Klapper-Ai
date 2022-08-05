@@ -12,12 +12,7 @@ using namespace std;
 int main()
 {
 
-
-
-
     CommandLine();
-
-
 
     return 0;
 }

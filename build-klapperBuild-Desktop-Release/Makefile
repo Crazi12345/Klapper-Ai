@@ -153,6 +153,30 @@ backpropagation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/KlapperNetwork.dir/build.make CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.s
 .PHONY : backpropagation.cpp.s
 
+commandline.o: commandline.cpp.o
+.PHONY : commandline.o
+
+# target to build an object file
+commandline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KlapperNetwork.dir/build.make CMakeFiles/KlapperNetwork.dir/commandline.cpp.o
+.PHONY : commandline.cpp.o
+
+commandline.i: commandline.cpp.i
+.PHONY : commandline.i
+
+# target to preprocess a source file
+commandline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KlapperNetwork.dir/build.make CMakeFiles/KlapperNetwork.dir/commandline.cpp.i
+.PHONY : commandline.cpp.i
+
+commandline.s: commandline.cpp.s
+.PHONY : commandline.s
+
+# target to generate assembly for a file
+commandline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KlapperNetwork.dir/build.make CMakeFiles/KlapperNetwork.dir/commandline.cpp.s
+.PHONY : commandline.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -285,6 +309,9 @@ help:
 	@echo "... backpropagation.o"
 	@echo "... backpropagation.i"
 	@echo "... backpropagation.s"
+	@echo "... commandline.o"
+	@echo "... commandline.i"
+	@echo "... commandline.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

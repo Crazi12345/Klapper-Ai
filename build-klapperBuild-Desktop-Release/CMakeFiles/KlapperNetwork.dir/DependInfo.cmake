@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/backpropagation.cpp" "CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.o.d"
+  "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/commandline.cpp" "CMakeFiles/KlapperNetwork.dir/commandline.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/commandline.cpp.o.d"
   "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/main.cpp" "CMakeFiles/KlapperNetwork.dir/main.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/main.cpp.o.d"
   "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/networkhandler.cpp" "CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o.d"
   "/home/tired_atlas/Desktop/Klapper-Ai/KlapperFiles/node.cpp" "CMakeFiles/KlapperNetwork.dir/node.cpp.o" "gcc" "CMakeFiles/KlapperNetwork.dir/node.cpp.o.d"

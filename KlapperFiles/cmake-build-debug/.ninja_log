@@ -1,0 +1,17 @@
+# ninja log v5
+1	611	1659702047574268112	CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.o	c86d1a2555a848f1
+1	613	1659702047576268078	CMakeFiles/KlapperNetwork.dir/node.cpp.o	6365ceffb6e09166
+2	1699	1659702048661249527	CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o	917b13d320e1baa0
+1	1721	1659702048684249134	CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o	17b1d1904f3f83e7
+2	1964	1659702048925245013	CMakeFiles/KlapperNetwork.dir/persistence.cpp.o	3b4fb2867b98df74
+613	1992	1659702048954244517	CMakeFiles/KlapperNetwork.dir/commandline.cpp.o	101fe9fdabbc8085
+0	2180	1659702049143241286	CMakeFiles/KlapperNetwork.dir/main.cpp.o	decfce5031a90257
+2181	2357	1659702049318238294	KlapperNetwork	6bf55b3abeee1dcd
+5	928	1659707738373207343	CMakeFiles/KlapperNetwork.dir/commandline.cpp.o	101fe9fdabbc8085
+4	1032	1659707738477205608	CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o	917b13d320e1baa0
+4	1132	1659707738577203941	CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o	17b1d1904f3f83e7
+4	1283	1659707738727201439	CMakeFiles/KlapperNetwork.dir/persistence.cpp.o	3b4fb2867b98df74
+3	1352	1659707738797200272	CMakeFiles/KlapperNetwork.dir/main.cpp.o	decfce5031a90257
+1352	1508	1659707738951197703	KlapperNetwork	6bf55b3abeee1dcd
+2	829	1659708472378966249	CMakeFiles/KlapperNetwork.dir/commandline.cpp.o	101fe9fdabbc8085
+829	960	1659708472508964081	KlapperNetwork	6bf55b3abeee1dcd
