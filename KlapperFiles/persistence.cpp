@@ -202,22 +202,22 @@ std::vector<int> Persistence::getDataRow(std::string label) {
 		std::cout << "No more data" << std::endl;
 
 	}
-	moveTrainedData();
+	moveTrainedData(pqxx::to_string(trainingData[index][0]));
 	return found_data;
 
 
 }
 
-void Persistence::moveTrainedData() {
+void Persistence::moveTrainedData(std::string id) {
 	pqxx::connection conn{getConnectionString()};
 	pqxx::work tah{conn};
 
 	conn.prepare("ChangeDataLocation", "insert into trained_data(id,data,label) "
-									   "select * from untrained_data fetch first 1 row only;");
+									   "select * from untrained_data where id = $1 fetch first 1 row only;");
 	conn.prepare("DeleteDataFromLocation",
-				 "DELETE from untrained_data where id in ( select id from trained_data fetch first 1 row only )");
-	tah.exec_prepared("ChangeDataLocation");
-	tah.exec_prepared("DeleteDataFromLocation");
+				 "DELETE from untrained_data where id in ( select id from trained_data where id = $1 fetch first 1 row only )");
+	tah.exec_prepared("ChangeDataLocation", id);
+	tah.exec_prepared("DeleteDataFromLocation", id);
 	tah.commit();
 
 	loadTrainingData();

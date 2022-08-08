@@ -17,7 +17,7 @@ public:
 
 	void generateFreshNodes(std::vector<std::vector<Node>> nodes);
 
-	void moveTrainedData();
+	void moveTrainedData(std::string string);
 
 	void moveTrainedDataBack();
 
