@@ -89,7 +89,7 @@ void Persistence::saveNodes(std::vector<std::vector<Node>> nodes) {
 	if(isWorking){
 		try {
 			tah.commit();
-			std::cout << "Succesfully saved node weights" << std::endl;
+			std::cout << "Successfully saved node weights" << std::endl;
 		}
 		catch(std::exception e) {
 			std::cout << e.what() << std::endl;
@@ -142,7 +142,7 @@ void Persistence::generateFreshNodes(std::vector<std::vector<Node>> nodes) {
 	}
 	try {
 		tah.commit();
-		std::cout << "Succesfully committed changes" << std::endl;
+		std::cout << "Successfully committed changes" << std::endl;
 	}
 	catch(std::exception e) {
 		std::cout << e.what() << std::endl;
@@ -169,7 +169,27 @@ std::string Persistence::generateWeightQueryString(int nodeX, int nodeY, std::ve
 
 	return weightString;
 }
+float Persistence::loadBias(std::string biasID) {
+	pqxx::connection conn{getConnectionString()};
+	pqxx::work tah{conn};
 
+	conn.prepare("FindBias", "select * from bias where id = $1");
+	pqxx::result r = tah.exec_prepared("FindBias",biasID);
+	return std::stof(pqxx::to_string(r[0][1]));
+
+}
+
+void Persistence::saveBias(std::vector<float> bias) {
+	pqxx::connection conn{getConnectionString()};
+	pqxx::work tah{conn};
+
+	conn.prepare("UpdateBiasWeight", "Update bias Set weight = $1 WHERE id = $2");
+
+	for(int i = 0; i< bias.size();i++){
+		tah.exec_prepared("UpdateBiasWeight",bias[i],std::to_string(i));
+	}
+	tah.commit();
+}
 void Persistence::loadTrainingData() {
 	pqxx::connection conn{getConnectionString()};
 	pqxx::work tah{conn};
@@ -234,6 +254,10 @@ void Persistence::moveTrainedDataBack() {
 	tah.exec_prepared("MoveDataBack");
 	tah.exec_prepared("DeleteDataLocation");
 	tah.commit();
+
+}
+
+Persistence::~Persistence() {
 
 }
 

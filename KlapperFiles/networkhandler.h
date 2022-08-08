@@ -27,6 +27,7 @@ public:
 
 	float CalculateOutput(std::vector<int> &inputs);
 
+	std::vector<float> getBiasWeight();
 private:
 	std::vector<std::vector<Node>> nodes;
 
@@ -36,8 +37,8 @@ private:
 	int numberOfLayers = 0;
 	int numberOfNodes = 0;
 
-	float bias_weight[5];
-	float bias_weight_change[5];
+	std::vector<float> bias_weight = {0,0,0,0,0,0};
+	std::vector<float> bias_weight_change={0,0,0,0,0,0};
 
 	void bias_weight_change_Clear();
 

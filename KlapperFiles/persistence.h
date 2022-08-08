@@ -22,10 +22,13 @@ public:
 	void moveTrainedDataBack();
 
 	void loadNodeData();
-
+	float loadBias(std::string biasID);
+	void saveBias(std::vector<float> bias);
 	std::vector<int> getDataRow(std::string label);
 
 	void loadTrainingData();
+
+	virtual ~Persistence();
 
 
 private:

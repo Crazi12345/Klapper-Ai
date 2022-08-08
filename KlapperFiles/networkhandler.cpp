@@ -22,7 +22,7 @@ void NetworkHandler::generateNodes() {
 	Persistence p;
 	// Loop to generate the inputLayer
 
-	std::cout << "Generating Input Layer" << std::endl;
+	std::cout << "Loading Input Layer" << std::endl;
 	for(int i = 0; i < inputNodeCount; i++) {
 		Node *n = new Node(0, i);
 		std::vector<long> w = p.loadNode(n->getId());
@@ -35,15 +35,16 @@ void NetworkHandler::generateNodes() {
 
 	//Generate input bias node
 
-	float random_weight = (rand() % 100 - 50);
-	bias_weight[0] = random_weight;
+//	float random_weight = (rand() % 100 - 50);
+	bias_weight.at(0) = (p.loadBias("0"));
 
 
 	// Loop to generate the Hidden Layers
-	std::cout << "Generating Hidden Layer" << std::endl;
+	std::cout << "Loading Hidden Layer" << std::endl;
 	int tempNumOfNodes = numberOfNodes;
 	for(int i = 1; i < numberOfLayers; i++) {
 		temp.clear();
+		bias_weight[i] = p.loadBias(std::to_string(i));
 		for(int j = 0; j < tempNumOfNodes; j++) {
 			Node *n = new Node(i, j);
 			std::vector<long> w = p.loadNode(n->getId());
@@ -83,7 +84,7 @@ void NetworkHandler::generateRandomWeightNodes() {
 
 	//Generate input bias node
 	float random_weight = (rand() % 100 - 50);
-	bias_weight[0] = random_weight;
+	bias_weight.at(0) = (random_weight);
 
 
 
@@ -128,7 +129,7 @@ void NetworkHandler::bias_weight_change_Clear() {
 
 	for(int i = 0; i < array_size; i++) {
 
-		bias_weight_change[i] = 0;
+		bias_weight_change.at(i) = 0;
 
 	}
 }
@@ -275,6 +276,10 @@ float NetworkHandler::CalculateOutput(std::vector<int> &inputs) {
 double NetworkHandler::sigmoid(double x) {
 
 	return (1 / (1 + pow(2.71828, -1 * x)));
+}
+
+std::vector<float> NetworkHandler::getBiasWeight() {
+	return reinterpret_cast<const std::vector<float> &>(bias_weight);
 }
 
 

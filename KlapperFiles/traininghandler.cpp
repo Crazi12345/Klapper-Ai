@@ -84,7 +84,8 @@ void TrainingHandler::Train() {
 			std::cout << "TARGET: " << input1 << std::endl;
 			std::cout << "NOISE: " << input2 << std::endl;
 
-			//per.saveNodes(nh.getNodes());
+			per.saveNodes(nh.getNodes());
+			per.saveBias(nh.getBiasWeight());
 		} else {
 			std::cout << "NETWORK FAILED: RETRY" << std::endl;
 			std::cout << "TARGET: " << input1 << std::endl;
