@@ -1,1 +1,0 @@
-/usr/bin/g++ -lpqxx -g CMakeFiles/KlapperNetwork.dir/main.cpp.o CMakeFiles/KlapperNetwork.dir/node.cpp.o CMakeFiles/KlapperNetwork.dir/networkhandler.cpp.o CMakeFiles/KlapperNetwork.dir/backpropagation.cpp.o CMakeFiles/KlapperNetwork.dir/persistence.cpp.o CMakeFiles/KlapperNetwork.dir/traininghandler.cpp.o CMakeFiles/KlapperNetwork.dir/commandline.cpp.o -o KlapperNetwork 
